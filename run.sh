@@ -14,7 +14,7 @@ pip install -r requirements.txt
 python manage.py collectstatic --noinput
 export DJANGO_SETTINGS_MODULE=goalboard.settings
 export PYTHONPATH=$DJANGODIR:$PYTHONPATH
-export DEBUG=False
+export DEBUG=FALSE
 
 
 $DJANGODIR/venv/bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
