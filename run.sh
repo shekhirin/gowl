@@ -11,6 +11,7 @@ echo "Starting $NAME"
 cd $DJANGODIR
 source venv/bin/activate
 pip install -r requirements.txt
+python manage.py collectstatic --noinput
 export DJANGO_SETTINGS_MODULE=goalboard.settings
 export PYTHONPATH=$DJANGODIR:$PYTHONPATH
 export DEBUG=False

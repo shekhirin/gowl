@@ -50,7 +50,6 @@ def user_goalboard(request, username):
     request.user = user
 
     spreadsheet = GoalboardSpreadsheet(user)
-    spreadsheet.goals
 
     return render(request, 'user_goalboard.html', {'spreadsheet': spreadsheet, 'avatar': user.socialaccount_set.filter(provider='google')[0].extra_data['picture']})
 
