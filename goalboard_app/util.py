@@ -18,7 +18,6 @@ class GoalboardSpreadsheet:
     def goals(self):
         start = time()
         worksheet = self.worksheets['goals']
-        print(worksheet)
         goals_list = []
         for goal in worksheet:
             goal_name = goal[0]
@@ -34,7 +33,6 @@ class GoalboardSpreadsheet:
                 not isinstance(goal_values[1], int) and not isinstance(goal_values[2], bool),
                 (goal_values[0] == '' and not isinstance(goal_values[1], int)) and not isinstance(goal_values[2], bool)
             ]
-            print(goal_name, checks)
             if any(checks):
                 continue
             goals_list.append({
@@ -44,5 +42,4 @@ class GoalboardSpreadsheet:
                 'planned': goal_values[1],
                 'status': goal_values[2]
             })
-        print(goals_list)
         return goals_list
