@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$qp1pqmd4a+-$23ujo6)c=-q7w7un3%a-b5kkcg6$v3!4)makq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", True)
+DEBUG = bool(os.environ.get("DEBUG", True))
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'www.goalboard.live', 'goalboard.live']
 
@@ -44,9 +44,10 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
 
-    'sass_processor',
-    'livereload'
+    'sass_processor'
 ]
+if DEBUG:
+    INSTALLED_APPS.append('livereload')
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -55,9 +56,10 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'livereload.middleware.LiveReloadScript'
+    'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
+if DEBUG:
+    MIDDLEWARE.append('livereload.middleware.LiveReloadScript')
 
 ROOT_URLCONF = 'goalboard.urls'
 
