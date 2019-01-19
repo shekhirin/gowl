@@ -1,0 +1,34 @@
+{% load sass_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% sass_src 'css/style.scss' %}">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900" rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
+    {% if not debug %}
+        <script>
+            (function (d, h, m) {
+                var js, fjs = d.getElementsByTagName(h)[0];
+                if (d.getElementById(m)) {
+                    return;
+                }
+                js = d.createElement(h);
+                js.id = m;
+                js.onload = function () {
+                    window.makerWidgetComInit({
+                        position: "left",
+                        widget: "4xix5atpaibfoa9m-hs10skl6ekxolwiv-brkxylicvs9e6qnb"
+                    })
+                };
+                js.src = "https://makerwidget.com/js/embed.js";
+                fjs.parentNode.insertBefore(js, fjs)
+            }(document, "script", "dhm"))
+        </script>
+    {% endif %}
+</head>
+<body>
+{% block content %}
+{% endblock %}
+</body>
+</html>

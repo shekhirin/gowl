@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load title %}
+{% load socialaccount %}
+{% load static %}
+
+{% block title %}{% title %}{% endblock %}
+
+{% block content %}
+    <header>
+        {% include 'nav.html' %}
+        {#        <img src="{% static 'img/header_bg.jpg' %}" alt=""/>#}
+        <div class="header-title">Achieve more<br>with Goalboard
+        </div>
+    </header>
+    <div class="main getting-started">
+        {% if states.2 == 'done' %}
+          <div class="enjoy-button">
+            <a href="{{ user.goalboard_url }}">Enjoy your Goalboard</a>
+          </div>
+        {% endif %}
+
+        <span class="headline {{ states.2 }}">
+            Just a few steps to become<br>more motivated
+        </span>
+        <hr class="{{ states.2 }}">
+        <ul>
+            <li class="{{ states.0 }}">
+                {% if states.0 == 'done' %}✅{% elif states.0 == 'active' %}👉{% else %}⏳{% endif %}
+                <a {% if states.0 == 'active' %}href="/google/login/?process=login"{% endif %}>1. Login with Google</a>
+            </li>
+            <li class="{{ states.1 }}">
+                {% if states.1 == 'done' %}✅{% elif states.1 == 'active' %}👉{% else %}⏳{% endif %}
+                <a {% if states.1 == 'active' %}href="{% url 'user_spreadsheet' %}" target="_blank"{% endif %}>2. Open and edit Spreadsheet</a>
+            </li>
+            <li class="{{ states.2 }}">
+                {% if states.2 == 'done' %}✅{% elif states.2 == 'active' %}👉{% else %}⏳{% endif %}
+                <a {% if states.2 == 'active' %}href="{% url 'user_profile' %}?continue=/"{% endif %}>3. Pick a username</a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

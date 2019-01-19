@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load title %}
+
+{% block title %}{% title user.full_name %}{% endblock %}
+
+{% block content %}
+<div class="goalboard">
+  <div class="whoami">
+    <h1>Who am I?</h1>
+    <div class="info">
+      <img src="{{ avatar }}" />
+      <div class="facts">
+        <h2>{{ user.full_name }}</h2>
+        <ul>
+          {% for fact in spreadsheet.whoami %}
+            <li>{{ fact }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="goals">
+    My {% now "Y" %} Goals<br>
+    {% for goal in spreadsheet.goals %}
+    {% if goal.type == 'measurable' %}
+    {{ goal.name }} – {{ goal.done }} out of {{ goal.planned }}
+    {% endif %}
+
+    {% if goal.type == 'binary' %}
+    {{ goal.name }} – {{ goal.status }}
+    {% endif %}
+    <br>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
