@@ -24,7 +24,7 @@ SECRET_KEY = '$qp1pqmd4a+-$23ujo6)c=-q7w7un3%a-b5kkcg6$v3!4)makq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", True)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'www.goalboard.live', 'goalboard.live']
 
 # Application definition
 

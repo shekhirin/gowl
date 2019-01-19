@@ -9,14 +9,14 @@ DJANGO_WSGI_MODULE=goalboard.wsgi
 echo "Starting $NAME"
 
 cd $DJANGODIR
-source ../bin/activate
-pip install -r requirementst.xt
-export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
+source venv/bin/activate
+pip install -r requirements.txt
+export DJANGO_SETTINGS_MODULE=goalboard.settings
 export PYTHONPATH=$DJANGODIR:$PYTHONPATH
 export DEBUG=False
 
 
-$DJANGODIR/bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
+$DJANGODIR/venv/bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
   --name $NAME \
   --workers $NUM_WORKERS \
   --log-level=debug \
