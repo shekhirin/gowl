@@ -1,4 +1,6 @@
 {% load sass_tags %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +16,7 @@
 
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% sass_src 'css/style.scss' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}"/>
     <title>{% block title %}{% endblock %}</title>
     {% if not debug %}
         <script>
