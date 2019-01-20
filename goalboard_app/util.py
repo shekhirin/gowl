@@ -35,11 +35,14 @@ class GoalboardSpreadsheet:
             ]
             if any(checks):
                 continue
-            goals_list.append({
+            goal_dict = {
                 'name': goal_name,
                 'type': 'binary' if isinstance(goal_values[2], bool) else 'measurable',
                 'done': goal_values[0],
                 'planned': goal_values[1],
-                'status': goal_values[2]
-            })
+                'status': goal_values[2],
+                'percentage': int((goal_values[2] if isinstance(goal_values[2], bool) else goal_values[0]/goal_values[1])*100)
+            }
+            goal_dict['percentage_rounded'] = goal_dict['percentage']//10*10
+            goals_list.append(goal_dict)
         return goals_list

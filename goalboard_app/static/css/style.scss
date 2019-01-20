@@ -1,3 +1,20 @@
+@mixin gradient($from, $to) {
+  /* fallback/image non-cover color */
+  background-color: $from;
+
+  /* Firefox 3.6+ */
+  background-image: -moz-linear-gradient($from, $to);
+
+  /* Safari 4+, Chrome 1+ */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+
+  /* Safari 5.1+, Chrome 10+ */
+  background-image: -webkit-linear-gradient($from, $to);
+
+  /* Opera 11.10+ */
+  background-image: -o-linear-gradient($from, $to);
+}
+
 html {
   font-family: 'Nunito', sans-serif;
 }
@@ -116,14 +133,16 @@ nav {
 
 .goalboard {
   margin: 45px;
+  h1 {
+    font-weight: bold;
+    font-size: 75px;
+    text-align: center;
+  }
   .whoami {
-    h1 {
-      font-weight: bold;
-      font-size: 75px;
-      text-align: center;
-    }
     .info {
       height: 240px;
+      display: flex;
+      justify-content: center;
       img {
         float: left;
         max-width: 100%;
@@ -131,11 +150,12 @@ nav {
         border-radius: 50%;
       }
       .facts {
-        padding-left: 20px;
+        margin-left: 20px;
         height: 240px;
         display: flex;
         justify-content: center;
         flex-direction: column;
+        align-items: flex-start;
         h2 {
           font-size: 50px;
           font-weight: bold;
@@ -151,6 +171,110 @@ nav {
           padding: 0;
           margin-top: 20px;
           list-style-type: none;
+        }
+      }
+    }
+  }
+  .goals {
+    .grid {
+      margin: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      @media (max-width: 400px) {
+        display: block !important;
+      }
+
+      .grid-element {
+        width: 400px;
+        height: 230px;
+        border-radius: 20px;
+        position: relative;
+        margin: 0 25px 50px 25px;
+        &.percentage-0 {
+          @include gradient(lighten(#d95449, 10%), darken(#d95449, 10%))
+        }
+        &.percentage-10 {
+          @include gradient(lighten(#E0714F, 10%), darken(#E0714F, 10%))
+        }
+        &.percentage-20 {
+          @include gradient(lighten(#E0714F, 10%), darken(#E0714F, 10%))
+        }
+        &.percentage-30 {
+          @include gradient(lighten(#EFAB5B, 10%), darken(#EFAB5B, 10%))
+        }
+        &.percentage-40 {
+          @include gradient(lighten(#f7c962, 10%), darken(#f7c962, 10%))
+        }
+        &.percentage-50 {
+          @include gradient(lighten(#f7c962, 10%), darken(#f7c962, 10%))
+        }
+        &.percentage-60 {
+          @include gradient(lighten(#CECA5A, 10%), darken(#CECA5A, 10%))
+        }
+        &.percentage-70 {
+          @include gradient(lighten(#A6CB52, 10%), darken(#A6CB52, 10%))
+        }
+        &.percentage-80 {
+          @include gradient(lighten(#7ECD4A, 10%), darken(#7ECD4A, 10%))
+        }
+        &.percentage-90 {
+          @include gradient(lighten(#56CE42, 10%), darken(#56CE42, 10%))
+        }
+        &.percentage-100 {
+          @include gradient(lighten(#2ED03A, 10%), darken(#2ED03A, 10%))
+        }
+        @media (max-width: 400px) {
+          width: 100% !important;
+          margin: 0 0 10px 0 !important;
+        }
+
+        .container {
+          margin: 20px;
+          .name {
+            font-weight: bold;
+            font-size: 30px;
+            color: white;
+            letter-spacing: 0;
+          }
+
+          .footer {
+            position: absolute;
+            bottom: 20px;
+
+            span {
+              color: white;
+              font-size: 25px;
+              padding-bottom: 28px;
+            }
+
+            div { height: 10px; }
+
+            .progress-bar {
+              text-align: center;
+              line-height: 33px;
+              width: 360px;
+              height: 33px;
+              border-radius: 20px;
+              background-color: white;
+              border: 2px solid #FFFFFF;
+              box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              -webkit-box-sizing: border-box;
+
+              &.binary-true, &.binary-false {
+                font-size: 25px;
+              }
+              &.binary-true {
+                background-color: transparent !important;
+                color: white;
+              }
+              &.binary-false {
+                color: #d95449;
+              }
+            }
+          }
         }
       }
     }

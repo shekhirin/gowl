@@ -83,23 +83,26 @@ nav {
 
 .goalboard {
   margin: 45px; }
-  .goalboard .whoami h1 {
+  .goalboard h1 {
     font-weight: bold;
     font-size: 75px;
     text-align: center; }
   .goalboard .whoami .info {
-    height: 240px; }
+    height: 240px;
+    display: flex;
+    justify-content: center; }
     .goalboard .whoami .info img {
       float: left;
       max-width: 100%;
       max-height: 100%;
       border-radius: 50%; }
     .goalboard .whoami .info .facts {
-      padding-left: 20px;
+      margin-left: 20px;
       height: 240px;
       display: flex;
       justify-content: center;
-      flex-direction: column; }
+      flex-direction: column;
+      align-items: flex-start; }
       .goalboard .whoami .info .facts h2 {
         font-size: 50px;
         font-weight: bold;
@@ -113,5 +116,179 @@ nav {
         padding: 0;
         margin-top: 20px;
         list-style-type: none; }
+  .goalboard .goals .grid {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap; }
+    @media (max-width: 400px) {
+      .goalboard .goals .grid {
+        display: block !important; } }
+    .goalboard .goals .grid .grid-element {
+      width: 400px;
+      height: 230px;
+      border-radius: 20px;
+      position: relative;
+      margin: 0 25px 50px 25px; }
+      .goalboard .goals .grid .grid-element.percentage-0 {
+        /* fallback/image non-cover color */
+        background-color: #e27c73;
+        /* Firefox 3.6+ */
+        background-image: -moz-linear-gradient(#e27c73, #c63529);
+        /* Safari 4+, Chrome 1+ */
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e27c73), to(#c63529));
+        /* Safari 5.1+, Chrome 10+ */
+        background-image: -webkit-linear-gradient(#e27c73, #c63529);
+        /* Opera 11.10+ */
+        background-image: -o-linear-gradient(#e27c73, #c63529); }
+      .goalboard .goals .grid .grid-element.percentage-10 {
+        /* fallback/image non-cover color */
+        background-color: #e8947a;
+        /* Firefox 3.6+ */
+        background-image: -moz-linear-gradient(#e8947a, #d64f26);
+        /* Safari 4+, Chrome 1+ */
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e8947a), to(#d64f26));
+        /* Safari 5.1+, Chrome 10+ */
+        background-image: -webkit-linear-gradient(#e8947a, #d64f26);
+        /* Opera 11.10+ */
+        background-image: -o-linear-gradient(#e8947a, #d64f26); }
+      .goalboard .goals .grid .grid-element.percentage-20 {
+        /* fallback/image non-cover color */
+        background-color: #e8947a;
+        /* Firefox 3.6+ */
+        background-image: -moz-linear-gradient(#e8947a, #d64f26);
+        /* Safari 4+, Chrome 1+ */
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e8947a), to(#d64f26));
+        /* Safari 5.1+, Chrome 10+ */
+        background-image: -webkit-linear-gradient(#e8947a, #d64f26);
+        /* Opera 11.10+ */
+        background-image: -o-linear-gradient(#e8947a, #d64f26); }
+      .goalboard .goals .grid .grid-element.percentage-30 {
+        /* fallback/image non-cover color */
+        background-color: #f4c389;
+        /* Firefox 3.6+ */
+        background-image: -moz-linear-gradient(#f4c389, #ea932d);
+        /* Safari 4+, Chrome 1+ */
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4c389), to(#ea932d));
+        /* Safari 5.1+, Chrome 10+ */
+        background-image: -webkit-linear-gradient(#f4c389, #ea932d);
+        /* Opera 11.10+ */
+        background-image: -o-linear-gradient(#f4c389, #ea932d); }
+      .goalboard .goals .grid .grid-element.percentage-40 {
+        /* fallback/image non-cover color */
+        background-color: #f9da93;
+        /* Firefox 3.6+ */
+        background-image: -moz-linear-gradient(#f9da93, #f5b831);
+        /* Safari 4+, Chrome 1+ */
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9da93), to(#f5b831));
+        /* Safari 5.1+, Chrome 10+ */
+        background-image: -webkit-linear-gradient(#f9da93, #f5b831);
+        /* Opera 11.10+ */
+        background-image: -o-linear-gradient(#f9da93, #f5b831); }
+      .goalboard .goals .grid .grid-element.percentage-50 {
+        /* fallback/image non-cover color */
+        background-color: #f9da93;
+        /* Firefox 3.6+ */
+        background-image: -moz-linear-gradient(#f9da93, #f5b831);
+        /* Safari 4+, Chrome 1+ */
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9da93), to(#f5b831));
+        /* Safari 5.1+, Chrome 10+ */
+        background-image: -webkit-linear-gradient(#f9da93, #f5b831);
+        /* Opera 11.10+ */
+        background-image: -o-linear-gradient(#f9da93, #f5b831); }
+      .goalboard .goals .grid .grid-element.percentage-60 {
+        /* fallback/image non-cover color */
+        background-color: #dad781;
+        /* Firefox 3.6+ */
+        background-image: -moz-linear-gradient(#dad781, #bdb838);
+        /* Safari 4+, Chrome 1+ */
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#dad781), to(#bdb838));
+        /* Safari 5.1+, Chrome 10+ */
+        background-image: -webkit-linear-gradient(#dad781, #bdb838);
+        /* Opera 11.10+ */
+        background-image: -o-linear-gradient(#dad781, #bdb838); }
+      .goalboard .goals .grid .grid-element.percentage-70 {
+        /* fallback/image non-cover color */
+        background-color: #bad779;
+        /* Firefox 3.6+ */
+        background-image: -moz-linear-gradient(#bad779, #8db436);
+        /* Safari 4+, Chrome 1+ */
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#bad779), to(#8db436));
+        /* Safari 5.1+, Chrome 10+ */
+        background-image: -webkit-linear-gradient(#bad779, #8db436);
+        /* Opera 11.10+ */
+        background-image: -o-linear-gradient(#bad779, #8db436); }
+      .goalboard .goals .grid .grid-element.percentage-80 {
+        /* fallback/image non-cover color */
+        background-color: #9ad872;
+        /* Firefox 3.6+ */
+        background-image: -moz-linear-gradient(#9ad872, #65b331);
+        /* Safari 4+, Chrome 1+ */
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9ad872), to(#65b331));
+        /* Safari 5.1+, Chrome 10+ */
+        background-image: -webkit-linear-gradient(#9ad872, #65b331);
+        /* Opera 11.10+ */
+        background-image: -o-linear-gradient(#9ad872, #65b331); }
+      .goalboard .goals .grid .grid-element.percentage-90 {
+        /* fallback/image non-cover color */
+        background-color: #7ad96b;
+        /* Firefox 3.6+ */
+        background-image: -moz-linear-gradient(#7ad96b, #40b02e);
+        /* Safari 4+, Chrome 1+ */
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7ad96b), to(#40b02e));
+        /* Safari 5.1+, Chrome 10+ */
+        background-image: -webkit-linear-gradient(#7ad96b, #40b02e);
+        /* Opera 11.10+ */
+        background-image: -o-linear-gradient(#7ad96b, #40b02e); }
+      .goalboard .goals .grid .grid-element.percentage-100 {
+        /* fallback/image non-cover color */
+        background-color: #57da61;
+        /* Firefox 3.6+ */
+        background-image: -moz-linear-gradient(#57da61, #25a62e);
+        /* Safari 4+, Chrome 1+ */
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#57da61), to(#25a62e));
+        /* Safari 5.1+, Chrome 10+ */
+        background-image: -webkit-linear-gradient(#57da61, #25a62e);
+        /* Opera 11.10+ */
+        background-image: -o-linear-gradient(#57da61, #25a62e); }
+      @media (max-width: 400px) {
+        .goalboard .goals .grid .grid-element {
+          width: 100% !important;
+          margin: 0 0 10px 0 !important; } }
+      .goalboard .goals .grid .grid-element .container {
+        margin: 20px; }
+        .goalboard .goals .grid .grid-element .container .name {
+          font-weight: bold;
+          font-size: 30px;
+          color: white;
+          letter-spacing: 0; }
+        .goalboard .goals .grid .grid-element .container .footer {
+          position: absolute;
+          bottom: 20px; }
+          .goalboard .goals .grid .grid-element .container .footer span {
+            color: white;
+            font-size: 25px;
+            padding-bottom: 28px; }
+          .goalboard .goals .grid .grid-element .container .footer div {
+            height: 10px; }
+          .goalboard .goals .grid .grid-element .container .footer .progress-bar {
+            text-align: center;
+            line-height: 33px;
+            width: 360px;
+            height: 33px;
+            border-radius: 20px;
+            background-color: white;
+            border: 2px solid #FFFFFF;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box; }
+            .goalboard .goals .grid .grid-element .container .footer .progress-bar.binary-true, .goalboard .goals .grid .grid-element .container .footer .progress-bar.binary-false {
+              font-size: 25px; }
+            .goalboard .goals .grid .grid-element .container .footer .progress-bar.binary-true {
+              background-color: transparent !important;
+              color: white; }
+            .goalboard .goals .grid .grid-element .container .footer .progress-bar.binary-false {
+              color: #d95449; }
 
 /*# sourceMappingURL=style.css.map */

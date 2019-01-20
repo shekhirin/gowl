@@ -20,17 +20,35 @@
     </div>
   </div>
   <div class="goals">
-    My {% now "Y" %} Goals<br>
-    {% for goal in spreadsheet.goals %}
-    {% if goal.type == 'measurable' %}
-    {{ goal.name }} – {{ goal.done }} out of {{ goal.planned }}
-    {% endif %}
-
-    {% if goal.type == 'binary' %}
-    {{ goal.name }} – {{ goal.status }}
-    {% endif %}
-    <br>
-    {% endfor %}
+    <h1>My {% now "Y" %} goals</h1>
+    <div class="grid">
+      {% for goal in spreadsheet.goals %}
+      <div class="grid-element percentage-{{ goal.percentage_rounded }}">
+        <div class="container">
+          <h2 class="name">{{ goal.name }}</h2>
+          <div class="footer">
+            <span>
+              {% if goal.type == 'measurable' %}
+              {{ goal.done }} out of {{ goal.planned }}
+              {% endif %}
+            </span>
+            <div></div>
+            <div class="progress-bar {% if goal.type == 'binary' %} binary-{{ goal.status|lower }} {% endif %}">
+              {% if goal.type == 'measurable' %}
+                {# {{ goal.percentage }}% #}
+              {% else %}
+                {% if goal.status %}
+                Done
+                {% else %}
+                In progress
+                {% endif %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 {% endblock %}

@@ -46,8 +46,6 @@ INSTALLED_APPS = [
 
     'sass_processor'
 ]
-if DEBUG:
-    INSTALLED_APPS.append('livereload')
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -58,8 +56,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
-if DEBUG:
-    MIDDLEWARE.append('livereload.middleware.LiveReloadScript')
 
 ROOT_URLCONF = 'goalboard.urls'
 

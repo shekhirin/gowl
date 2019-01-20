@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% sass_src 'css/style.scss' %}">
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900" rel="stylesheet">
+    {# <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script> #}
     <title>{% block title %}{% endblock %}</title>
     {% if not debug %}
         <script>
@@ -26,6 +27,8 @@
             }(document, "script", "dhm"))
         </script>
     {% endif %}
+
+    {% block head %}{% endblock %}
 </head>
 <body>
 {% block content %}
