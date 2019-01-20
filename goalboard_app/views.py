@@ -2,7 +2,6 @@ import datetime
 
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from django.http import HttpResponseRedirect
 from oauth2client.client import AccessTokenCredentials
 from allauth.socialaccount.models import SocialToken
 import gspread
@@ -37,7 +36,7 @@ def user_profile(request):
         request.user.save()
         form.save()
         if 'continue' in request.GET:
-            return HttpResponseRedirect(request.GET.get('continue'))
+            return redirect(request.GET.get('continue'))
         else:
             return render(request, 'user_profile.html', {'form': form})
 
@@ -45,9 +44,15 @@ def user_profile(request):
 
 
 def user_goalboard(request, username):
-    goalboard_user = CustomUser.objects.get(username=username)
+    try:
+        goalboard_user = CustomUser.objects.get(username=username)
+    except CustomUser.DoesNotExist:
+        return redirect('home')
 
-    spreadsheet = GoalboardSpreadsheet(goalboard_user)
+    try:
+        spreadsheet = GoalboardSpreadsheet(goalboard_user)
+    except SocialToken.DoesNotExist:
+        return redirect('home')
 
     return render(request, 'user_goalboard.html', {'goalboard_user': goalboard_user, 'spreadsheet': spreadsheet, 'avatar': goalboard_user.socialaccount_set.filter(provider='google')[0].extra_data['picture']})
 
@@ -55,10 +60,10 @@ def user_goalboard(request, username):
 def user_spreadsheet(request):
     user = request.user
     if not user.is_authenticated:
-        return redirect(home)
+        return redirect('home')
 
     if user.spreadsheetId:
-        return HttpResponseRedirect(f'https://docs.google.com/spreadsheets/d/{user.spreadsheetId}')
+        return redirect(f'https://docs.google.com/spreadsheets/d/{user.spreadsheetId}')
 
     gc = user.gc
 
@@ -69,4 +74,4 @@ def user_spreadsheet(request):
     user.save()
     request.user = user
 
-    return HttpResponseRedirect(f'https://docs.google.com/spreadsheets/d/{user.spreadsheetId}')
+    return redirect(f'https://docs.google.com/spreadsheets/d/{user.spreadsheetId}')
