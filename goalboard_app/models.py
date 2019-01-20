@@ -34,7 +34,7 @@ class CustomUser(AbstractUser):
             'refresh_token': token.token_secret,
             'grant_type': 'refresh_token'
         }).json()
-        
+
         token.token = r['access_token']
         token.expires_at = datetime.now(timezone.utc) + timedelta(seconds=r['expires_in'])
         token.save()

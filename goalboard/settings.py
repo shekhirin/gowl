@@ -46,10 +46,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
 
     'sass_processor',
-
-    'raven.contrib.django.raven_compat',
-
-    'django_webp'
+    'raven.contrib.django.raven_compat'
 ]
 
 MIDDLEWARE = [
@@ -124,8 +121,7 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-                'django_webp.context_processors.webp'
+                'django.contrib.messages.context_processors.messages'
             ],
         },
     },
