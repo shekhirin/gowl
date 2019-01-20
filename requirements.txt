@@ -7,3 +7,4 @@ django-sass-processor
 oauth2client
 gspread
 psycopg2-binary
+raven
