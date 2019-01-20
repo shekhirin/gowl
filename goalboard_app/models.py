@@ -17,6 +17,7 @@ class CustomUser(AbstractUser):
     objects = CustomUserManager()
     spreadsheetId = models.CharField(max_length=100, blank=True)
     is_username_set = models.BooleanField(default=False)
+    is_spreadsheet_set = models.BooleanField(default=False)
 
     @property
     def full_name(self):
@@ -47,10 +48,6 @@ class CustomUser(AbstractUser):
         gc = gspread.authorize(credentials)
 
         return gc
-
-    @property
-    def is_spreadsheet_set(self):
-        return bool(self.spreadsheetId if hasattr(self, 'spreadsheetId') else False)
 
     @property
     def goalboard_url(self):

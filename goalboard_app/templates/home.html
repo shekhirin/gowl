@@ -34,7 +34,7 @@
             </li>
             <li class="{{ states.2 }}">
                 {% if states.2 == 'done' %}✅{% elif states.2 == 'active' %}👉{% else %}⏳{% endif %}
-                <a {% if states.2 == 'active' %}href="{% url 'user_profile' %}?continue=/"{% endif %}>3. Pick a username</a>
+                <a {% if states.2 == 'active' %}href="{% url 'user_profile' %}?next=/"{% endif %}>3. Pick a username</a>
             </li>
         </ul>
     </div>

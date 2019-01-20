@@ -194,6 +194,7 @@ nav {
       @for $i from 0 through 80 {
         .percentage-#{$i+20} {
           background-color: mix(#3ec048, #f7c962, percentage($i / 80));
+          padding: 0 !important;
         }
       }
 

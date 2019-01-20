@@ -35,8 +35,8 @@ def user_profile(request):
         request.user.is_username_set = True
         request.user.save()
         form.save()
-        if 'continue' in request.GET:
-            return redirect(request.GET.get('continue'))
+        if 'next' in request.GET:
+            return redirect(request.GET.get('next'))
         else:
             return render(request, 'user_profile.html', {'form': form})
 
@@ -61,6 +61,10 @@ def user_spreadsheet(request):
     user = request.user
     if not user.is_authenticated:
         return redirect('home')
+
+    if not user.is_spreadsheet_set:
+        user.is_spreadsheet_set = True
+        user.save()
 
     if user.spreadsheetId:
         return redirect(f'https://docs.google.com/spreadsheets/d/{user.spreadsheetId}')
