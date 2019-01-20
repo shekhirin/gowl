@@ -1,16 +1,21 @@
 {% extends 'base.html' %}
 {% load title %}
 
-{% block title %}{% title user.full_name %}{% endblock %}
+{% block title %}{% title goalboard_user.full_name %}{% endblock %}
 
 {% block content %}
+{% if request.user == goalboard_user %}
+<a href="{% url 'user_spreadsheet' %}" class="edit-spreadsheet" target="_blank">
+Edit spreadsheet
+</a>
+{% endif %}
 <div class="goalboard">
   <div class="whoami">
     <h1>Who am I?</h1>
     <div class="info">
       <img src="{{ avatar }}" />
       <div class="facts">
-        <h2>{{ user.full_name }}</h2>
+        <h2>{{ goalboard_user.full_name }}</h2>
         <ul>
           {% for fact in spreadsheet.whoami %}
             <li>{{ fact }}</li>

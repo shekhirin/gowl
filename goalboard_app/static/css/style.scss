@@ -114,6 +114,23 @@ nav {
   }
 }
 
+.edit-spreadsheet {
+  position: fixed;
+  left: 0;
+  transform-origin: left;
+  top: calc(50% + 100px);
+  transform: translateY(-50%) rotate(-90deg);
+  margin-left: 25px;
+  width: 200px;
+  height: 50px;
+  background-color: #2ED03A;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
 .goalboard {
   margin: 45px;
   h1 {

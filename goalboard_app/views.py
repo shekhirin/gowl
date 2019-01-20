@@ -45,13 +45,11 @@ def user_profile(request):
 
 
 def user_goalboard(request, username):
-    start = time()
-    user = CustomUser.objects.get(username=username)
-    request.user = user
+    goalboard_user = CustomUser.objects.get(username=username)
 
-    spreadsheet = GoalboardSpreadsheet(user)
+    spreadsheet = GoalboardSpreadsheet(goalboard_user)
 
-    return render(request, 'user_goalboard.html', {'spreadsheet': spreadsheet, 'avatar': user.socialaccount_set.filter(provider='google')[0].extra_data['picture']})
+    return render(request, 'user_goalboard.html', {'goalboard_user': goalboard_user, 'spreadsheet': spreadsheet, 'avatar': goalboard_user.socialaccount_set.filter(provider='google')[0].extra_data['picture']})
 
 
 def user_spreadsheet(request):
