@@ -15,6 +15,7 @@ python manage.py collectstatic --noinput
 export DJANGO_SETTINGS_MODULE=goalboard.settings
 export PYTHONPATH=$DJANGODIR:$PYTHONPATH
 
+python manage.py migrate
 
 $DJANGODIR/venv/bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
   --name $NAME \
