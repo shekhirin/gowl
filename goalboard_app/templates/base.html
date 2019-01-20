@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+    {% if not debug %}
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37751752-10"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -13,6 +13,7 @@
 
     gtag('config', 'UA-37751752-10');
     </script>
+    {% endif %}
 
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% sass_src 'css/style.scss' %}">

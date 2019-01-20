@@ -11,6 +11,9 @@ class CustomUserAdmin(UserAdmin):
         }),
         ('Is username set', {
             'fields': ('is_username_set',)
+        }),
+        ('Is spreadsheet set', {
+            'fields': ('is_spreadsheet_set',)
         })
     )
 
