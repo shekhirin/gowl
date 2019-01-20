@@ -30,7 +30,7 @@
             </li>
             <li class="{{ states.1 }}">
                 {% if states.1 == 'done' %}✅{% elif states.1 == 'active' %}👉{% else %}⏳{% endif %}
-                <a {% if states.1 == 'active' %}href="{% url 'user_spreadsheet' %}" target="_blank"{% endif %}>2. Open and edit Spreadsheet</a>
+                <a {% if states.1 == 'active' %}href="{% url 'user_spreadsheet' %}" target="_blank" onclick="window.setTimeout(function(){ window.location.reload() }, 5000);"{% endif %}>2. Open and edit Spreadsheet</a>
             </li>
             <li class="{{ states.2 }}">
                 {% if states.2 == 'done' %}✅{% elif states.2 == 'active' %}👉{% else %}⏳{% endif %}
