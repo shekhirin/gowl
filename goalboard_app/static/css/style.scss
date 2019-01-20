@@ -235,14 +235,14 @@ nav {
                 width: var(--percentage);
               }
 
-              &.binary-true, &.binary-false {
+              &.progress-true, &.progress-false {
                 font-size: 25px;
               }
-              &.binary-true {
+              &.progress-true {
                 background-color: transparent !important;
                 color: white;
               }
-              &.binary-false {
+              &.progress-false {
                 color: #d95449;
               }
             }

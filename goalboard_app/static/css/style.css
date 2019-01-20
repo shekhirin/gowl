@@ -372,12 +372,12 @@ nav {
               padding: 0.01em 16px;
               height: 100%;
               width: var(--percentage); }
-            .goalboard .goals .grid .grid-element .container .footer .progress-bar.binary-true, .goalboard .goals .grid .grid-element .container .footer .progress-bar.binary-false {
+            .goalboard .goals .grid .grid-element .container .footer .progress-bar.progress-true, .goalboard .goals .grid .grid-element .container .footer .progress-bar.progress-false {
               font-size: 25px; }
-            .goalboard .goals .grid .grid-element .container .footer .progress-bar.binary-true {
+            .goalboard .goals .grid .grid-element .container .footer .progress-bar.progress-true {
               background-color: transparent !important;
               color: white; }
-            .goalboard .goals .grid .grid-element .container .footer .progress-bar.binary-false {
+            .goalboard .goals .grid .grid-element .container .footer .progress-bar.progress-false {
               color: #d95449; }
 
 /*# sourceMappingURL=style.css.map */

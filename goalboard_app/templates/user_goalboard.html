@@ -33,13 +33,13 @@
               {% endif %}
             </span>
             <div></div>
-            <div class="progress-bar {% if goal.type == 'binary' %} binary-{{ goal.status|lower }} {% endif %}">
-              {% if goal.type == 'measurable' %}
+            <div class="progress-bar {% if goal.type == 'binary' %} progress-{{ goal.status|lower }} {% elif goal.type == 'measurable' and goal.percentage == 100 %} progress-true {% endif %}">
+              {% if goal.type == 'measurable' and goal.percentage < 100 %}
                 <div class="progress percentage-{{ goal.percentage }}" style="--percentage: {{ goal.percentage }}%;">
                   {# {{ goal.percentage }}% #}
                 </div>
               {% else %}
-                {% if goal.status %}
+                {% if goal.percentage == 100 %}
                 Done
                 {% else %}
                 In progress
