@@ -91,10 +91,7 @@ if not DEBUG:
     DATABASES['default'] = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'goalboard',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '',
+        'USER': 'root'
     }
 
 # Password validation
