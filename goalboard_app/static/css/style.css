@@ -125,133 +125,216 @@ nav {
     @media (max-width: 400px) {
       .goalboard .goals .grid {
         display: block !important; } }
+    .goalboard .goals .grid .percentage-0 {
+      background-color: #d4584e; }
+    .goalboard .goals .grid .percentage-1 {
+      background-color: #d65e4f; }
+    .goalboard .goals .grid .percentage-2 {
+      background-color: #d86350; }
+    .goalboard .goals .grid .percentage-3 {
+      background-color: #d96951; }
+    .goalboard .goals .grid .percentage-4 {
+      background-color: #db6f52; }
+    .goalboard .goals .grid .percentage-5 {
+      background-color: #dd7453; }
+    .goalboard .goals .grid .percentage-6 {
+      background-color: #df7a54; }
+    .goalboard .goals .grid .percentage-7 {
+      background-color: #e08055; }
+    .goalboard .goals .grid .percentage-8 {
+      background-color: #e28556; }
+    .goalboard .goals .grid .percentage-9 {
+      background-color: #e48b57; }
+    .goalboard .goals .grid .percentage-10 {
+      background-color: #e69158; }
+    .goalboard .goals .grid .percentage-11 {
+      background-color: #e79659; }
+    .goalboard .goals .grid .percentage-12 {
+      background-color: #e99c5a; }
+    .goalboard .goals .grid .percentage-13 {
+      background-color: #eba15b; }
+    .goalboard .goals .grid .percentage-14 {
+      background-color: #eda75c; }
+    .goalboard .goals .grid .percentage-15 {
+      background-color: #eead5d; }
+    .goalboard .goals .grid .percentage-16 {
+      background-color: #f0b25e; }
+    .goalboard .goals .grid .percentage-17 {
+      background-color: #f2b85f; }
+    .goalboard .goals .grid .percentage-18 {
+      background-color: #f4be60; }
+    .goalboard .goals .grid .percentage-19 {
+      background-color: #f5c361; }
+    .goalboard .goals .grid .percentage-20 {
+      background-color: #f7c962; }
+    .goalboard .goals .grid .percentage-20 {
+      background-color: #f7c962; }
+    .goalboard .goals .grid .percentage-21 {
+      background-color: #f5c962; }
+    .goalboard .goals .grid .percentage-22 {
+      background-color: #f2c961; }
+    .goalboard .goals .grid .percentage-23 {
+      background-color: #f0c961; }
+    .goalboard .goals .grid .percentage-24 {
+      background-color: #eec961; }
+    .goalboard .goals .grid .percentage-25 {
+      background-color: #ebc860; }
+    .goalboard .goals .grid .percentage-26 {
+      background-color: #e9c860; }
+    .goalboard .goals .grid .percentage-27 {
+      background-color: #e7c860; }
+    .goalboard .goals .grid .percentage-28 {
+      background-color: #e5c85f; }
+    .goalboard .goals .grid .percentage-29 {
+      background-color: #e2c85f; }
+    .goalboard .goals .grid .percentage-30 {
+      background-color: #e0c85f; }
+    .goalboard .goals .grid .percentage-31 {
+      background-color: #dec85e; }
+    .goalboard .goals .grid .percentage-32 {
+      background-color: #dbc85e; }
+    .goalboard .goals .grid .percentage-33 {
+      background-color: #d9c85e; }
+    .goalboard .goals .grid .percentage-34 {
+      background-color: #d7c75d; }
+    .goalboard .goals .grid .percentage-35 {
+      background-color: #d4c75d; }
+    .goalboard .goals .grid .percentage-36 {
+      background-color: #d2c75d; }
+    .goalboard .goals .grid .percentage-37 {
+      background-color: #d0c75c; }
+    .goalboard .goals .grid .percentage-38 {
+      background-color: #cdc75c; }
+    .goalboard .goals .grid .percentage-39 {
+      background-color: #cbc75c; }
+    .goalboard .goals .grid .percentage-40 {
+      background-color: #c9c75c; }
+    .goalboard .goals .grid .percentage-41 {
+      background-color: #c6c75b; }
+    .goalboard .goals .grid .percentage-42 {
+      background-color: #c4c75b; }
+    .goalboard .goals .grid .percentage-43 {
+      background-color: #c2c65b; }
+    .goalboard .goals .grid .percentage-44 {
+      background-color: #c0c65a; }
+    .goalboard .goals .grid .percentage-45 {
+      background-color: #bdc65a; }
+    .goalboard .goals .grid .percentage-46 {
+      background-color: #bbc65a; }
+    .goalboard .goals .grid .percentage-47 {
+      background-color: #b9c659; }
+    .goalboard .goals .grid .percentage-48 {
+      background-color: #b6c659; }
+    .goalboard .goals .grid .percentage-49 {
+      background-color: #b4c659; }
+    .goalboard .goals .grid .percentage-50 {
+      background-color: #b2c658; }
+    .goalboard .goals .grid .percentage-51 {
+      background-color: #afc658; }
+    .goalboard .goals .grid .percentage-52 {
+      background-color: #adc558; }
+    .goalboard .goals .grid .percentage-53 {
+      background-color: #abc557; }
+    .goalboard .goals .grid .percentage-54 {
+      background-color: #a8c557; }
+    .goalboard .goals .grid .percentage-55 {
+      background-color: #a6c557; }
+    .goalboard .goals .grid .percentage-56 {
+      background-color: #a4c556; }
+    .goalboard .goals .grid .percentage-57 {
+      background-color: #a1c556; }
+    .goalboard .goals .grid .percentage-58 {
+      background-color: #9fc556; }
+    .goalboard .goals .grid .percentage-59 {
+      background-color: #9dc555; }
+    .goalboard .goals .grid .percentage-60 {
+      background-color: #9bc555; }
+    .goalboard .goals .grid .percentage-61 {
+      background-color: #98c455; }
+    .goalboard .goals .grid .percentage-62 {
+      background-color: #96c454; }
+    .goalboard .goals .grid .percentage-63 {
+      background-color: #94c454; }
+    .goalboard .goals .grid .percentage-64 {
+      background-color: #91c454; }
+    .goalboard .goals .grid .percentage-65 {
+      background-color: #8fc453; }
+    .goalboard .goals .grid .percentage-66 {
+      background-color: #8dc453; }
+    .goalboard .goals .grid .percentage-67 {
+      background-color: #8ac453; }
+    .goalboard .goals .grid .percentage-68 {
+      background-color: #88c452; }
+    .goalboard .goals .grid .percentage-69 {
+      background-color: #86c352; }
+    .goalboard .goals .grid .percentage-70 {
+      background-color: #83c352; }
+    .goalboard .goals .grid .percentage-71 {
+      background-color: #81c351; }
+    .goalboard .goals .grid .percentage-72 {
+      background-color: #7fc351; }
+    .goalboard .goals .grid .percentage-73 {
+      background-color: #7cc351; }
+    .goalboard .goals .grid .percentage-74 {
+      background-color: #7ac350; }
+    .goalboard .goals .grid .percentage-75 {
+      background-color: #78c350; }
+    .goalboard .goals .grid .percentage-76 {
+      background-color: #76c350; }
+    .goalboard .goals .grid .percentage-77 {
+      background-color: #73c34f; }
+    .goalboard .goals .grid .percentage-78 {
+      background-color: #71c24f; }
+    .goalboard .goals .grid .percentage-79 {
+      background-color: #6fc24f; }
+    .goalboard .goals .grid .percentage-80 {
+      background-color: #6cc24f; }
+    .goalboard .goals .grid .percentage-81 {
+      background-color: #6ac24e; }
+    .goalboard .goals .grid .percentage-82 {
+      background-color: #68c24e; }
+    .goalboard .goals .grid .percentage-83 {
+      background-color: #65c24e; }
+    .goalboard .goals .grid .percentage-84 {
+      background-color: #63c24d; }
+    .goalboard .goals .grid .percentage-85 {
+      background-color: #61c24d; }
+    .goalboard .goals .grid .percentage-86 {
+      background-color: #5ec24d; }
+    .goalboard .goals .grid .percentage-87 {
+      background-color: #5cc14c; }
+    .goalboard .goals .grid .percentage-88 {
+      background-color: #5ac14c; }
+    .goalboard .goals .grid .percentage-89 {
+      background-color: #57c14c; }
+    .goalboard .goals .grid .percentage-90 {
+      background-color: #55c14b; }
+    .goalboard .goals .grid .percentage-91 {
+      background-color: #53c14b; }
+    .goalboard .goals .grid .percentage-92 {
+      background-color: #51c14b; }
+    .goalboard .goals .grid .percentage-93 {
+      background-color: #4ec14a; }
+    .goalboard .goals .grid .percentage-94 {
+      background-color: #4cc14a; }
+    .goalboard .goals .grid .percentage-95 {
+      background-color: #4ac14a; }
+    .goalboard .goals .grid .percentage-96 {
+      background-color: #47c049; }
+    .goalboard .goals .grid .percentage-97 {
+      background-color: #45c049; }
+    .goalboard .goals .grid .percentage-98 {
+      background-color: #43c049; }
+    .goalboard .goals .grid .percentage-99 {
+      background-color: #40c048; }
+    .goalboard .goals .grid .percentage-100 {
+      background-color: #3ec048; }
     .goalboard .goals .grid .grid-element {
       width: 400px;
       height: 230px;
       border-radius: 20px;
       position: relative;
       margin: 0 25px 50px 25px; }
-      .goalboard .goals .grid .grid-element.percentage-0 {
-        /* fallback/image non-cover color */
-        background-color: #e27c73;
-        /* Firefox 3.6+ */
-        background-image: -moz-linear-gradient(#e27c73, #c63529);
-        /* Safari 4+, Chrome 1+ */
-        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e27c73), to(#c63529));
-        /* Safari 5.1+, Chrome 10+ */
-        background-image: -webkit-linear-gradient(#e27c73, #c63529);
-        /* Opera 11.10+ */
-        background-image: -o-linear-gradient(#e27c73, #c63529); }
-      .goalboard .goals .grid .grid-element.percentage-10 {
-        /* fallback/image non-cover color */
-        background-color: #e8947a;
-        /* Firefox 3.6+ */
-        background-image: -moz-linear-gradient(#e8947a, #d64f26);
-        /* Safari 4+, Chrome 1+ */
-        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e8947a), to(#d64f26));
-        /* Safari 5.1+, Chrome 10+ */
-        background-image: -webkit-linear-gradient(#e8947a, #d64f26);
-        /* Opera 11.10+ */
-        background-image: -o-linear-gradient(#e8947a, #d64f26); }
-      .goalboard .goals .grid .grid-element.percentage-20 {
-        /* fallback/image non-cover color */
-        background-color: #e8947a;
-        /* Firefox 3.6+ */
-        background-image: -moz-linear-gradient(#e8947a, #d64f26);
-        /* Safari 4+, Chrome 1+ */
-        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e8947a), to(#d64f26));
-        /* Safari 5.1+, Chrome 10+ */
-        background-image: -webkit-linear-gradient(#e8947a, #d64f26);
-        /* Opera 11.10+ */
-        background-image: -o-linear-gradient(#e8947a, #d64f26); }
-      .goalboard .goals .grid .grid-element.percentage-30 {
-        /* fallback/image non-cover color */
-        background-color: #f4c389;
-        /* Firefox 3.6+ */
-        background-image: -moz-linear-gradient(#f4c389, #ea932d);
-        /* Safari 4+, Chrome 1+ */
-        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4c389), to(#ea932d));
-        /* Safari 5.1+, Chrome 10+ */
-        background-image: -webkit-linear-gradient(#f4c389, #ea932d);
-        /* Opera 11.10+ */
-        background-image: -o-linear-gradient(#f4c389, #ea932d); }
-      .goalboard .goals .grid .grid-element.percentage-40 {
-        /* fallback/image non-cover color */
-        background-color: #f9da93;
-        /* Firefox 3.6+ */
-        background-image: -moz-linear-gradient(#f9da93, #f5b831);
-        /* Safari 4+, Chrome 1+ */
-        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9da93), to(#f5b831));
-        /* Safari 5.1+, Chrome 10+ */
-        background-image: -webkit-linear-gradient(#f9da93, #f5b831);
-        /* Opera 11.10+ */
-        background-image: -o-linear-gradient(#f9da93, #f5b831); }
-      .goalboard .goals .grid .grid-element.percentage-50 {
-        /* fallback/image non-cover color */
-        background-color: #f9da93;
-        /* Firefox 3.6+ */
-        background-image: -moz-linear-gradient(#f9da93, #f5b831);
-        /* Safari 4+, Chrome 1+ */
-        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9da93), to(#f5b831));
-        /* Safari 5.1+, Chrome 10+ */
-        background-image: -webkit-linear-gradient(#f9da93, #f5b831);
-        /* Opera 11.10+ */
-        background-image: -o-linear-gradient(#f9da93, #f5b831); }
-      .goalboard .goals .grid .grid-element.percentage-60 {
-        /* fallback/image non-cover color */
-        background-color: #dad781;
-        /* Firefox 3.6+ */
-        background-image: -moz-linear-gradient(#dad781, #bdb838);
-        /* Safari 4+, Chrome 1+ */
-        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#dad781), to(#bdb838));
-        /* Safari 5.1+, Chrome 10+ */
-        background-image: -webkit-linear-gradient(#dad781, #bdb838);
-        /* Opera 11.10+ */
-        background-image: -o-linear-gradient(#dad781, #bdb838); }
-      .goalboard .goals .grid .grid-element.percentage-70 {
-        /* fallback/image non-cover color */
-        background-color: #bad779;
-        /* Firefox 3.6+ */
-        background-image: -moz-linear-gradient(#bad779, #8db436);
-        /* Safari 4+, Chrome 1+ */
-        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#bad779), to(#8db436));
-        /* Safari 5.1+, Chrome 10+ */
-        background-image: -webkit-linear-gradient(#bad779, #8db436);
-        /* Opera 11.10+ */
-        background-image: -o-linear-gradient(#bad779, #8db436); }
-      .goalboard .goals .grid .grid-element.percentage-80 {
-        /* fallback/image non-cover color */
-        background-color: #9ad872;
-        /* Firefox 3.6+ */
-        background-image: -moz-linear-gradient(#9ad872, #65b331);
-        /* Safari 4+, Chrome 1+ */
-        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9ad872), to(#65b331));
-        /* Safari 5.1+, Chrome 10+ */
-        background-image: -webkit-linear-gradient(#9ad872, #65b331);
-        /* Opera 11.10+ */
-        background-image: -o-linear-gradient(#9ad872, #65b331); }
-      .goalboard .goals .grid .grid-element.percentage-90 {
-        /* fallback/image non-cover color */
-        background-color: #7ad96b;
-        /* Firefox 3.6+ */
-        background-image: -moz-linear-gradient(#7ad96b, #40b02e);
-        /* Safari 4+, Chrome 1+ */
-        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7ad96b), to(#40b02e));
-        /* Safari 5.1+, Chrome 10+ */
-        background-image: -webkit-linear-gradient(#7ad96b, #40b02e);
-        /* Opera 11.10+ */
-        background-image: -o-linear-gradient(#7ad96b, #40b02e); }
-      .goalboard .goals .grid .grid-element.percentage-100 {
-        /* fallback/image non-cover color */
-        background-color: #57da61;
-        /* Firefox 3.6+ */
-        background-image: -moz-linear-gradient(#57da61, #25a62e);
-        /* Safari 4+, Chrome 1+ */
-        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#57da61), to(#25a62e));
-        /* Safari 5.1+, Chrome 10+ */
-        background-image: -webkit-linear-gradient(#57da61, #25a62e);
-        /* Opera 11.10+ */
-        background-image: -o-linear-gradient(#57da61, #25a62e); }
       @media (max-width: 400px) {
         .goalboard .goals .grid .grid-element {
           width: 100% !important;
@@ -277,12 +360,18 @@ nav {
             line-height: 33px;
             width: 360px;
             height: 33px;
-            border-radius: 20px;
             background-color: white;
             border: 2px solid #FFFFFF;
             box-sizing: border-box;
             -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box; }
+            -webkit-box-sizing: border-box;
+            z-index: 0; }
+            .goalboard .goals .grid .grid-element .container .footer .progress-bar, .goalboard .goals .grid .grid-element .container .footer .progress-bar .progress {
+              border-radius: 20px; }
+            .goalboard .goals .grid .grid-element .container .footer .progress-bar .progress {
+              padding: 0.01em 16px;
+              height: 100%;
+              width: var(--percentage); }
             .goalboard .goals .grid .grid-element .container .footer .progress-bar.binary-true, .goalboard .goals .grid .grid-element .container .footer .progress-bar.binary-false {
               font-size: 25px; }
             .goalboard .goals .grid .grid-element .container .footer .progress-bar.binary-true {

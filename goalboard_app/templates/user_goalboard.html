@@ -23,7 +23,7 @@
     <h1>My {% now "Y" %} goals</h1>
     <div class="grid">
       {% for goal in spreadsheet.goals %}
-      <div class="grid-element percentage-{{ goal.percentage_rounded }}">
+      <div class="grid-element percentage-{{ goal.percentage }}">
         <div class="container">
           <h2 class="name">{{ goal.name }}</h2>
           <div class="footer">
@@ -35,7 +35,9 @@
             <div></div>
             <div class="progress-bar {% if goal.type == 'binary' %} binary-{{ goal.status|lower }} {% endif %}">
               {% if goal.type == 'measurable' %}
-                {# {{ goal.percentage }}% #}
+                <div class="progress percentage-{{ goal.percentage }}" style="--percentage: {{ goal.percentage }}%;">
+                  {# {{ goal.percentage }}% #}
+                </div>
               {% else %}
                 {% if goal.status %}
                 Done
