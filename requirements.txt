@@ -8,3 +8,4 @@ oauth2client
 gspread
 psycopg2-binary
 raven
+django-webp

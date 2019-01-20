@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% load title %}
 {% load socialaccount %}
-{% load static %}
+{% load webp %}
 
 {% block title %}{% title %}{% endblock %}
 
 {% block content %}
     <header>
         {% include 'nav.html' %}
-        {#        <img src="{% static 'img/header_bg.jpg' %}" alt=""/>#}
+        {#        <img src="{% webp 'img/header_bg.jpg' %}" alt=""/>#}
         <div class="header-title">Achieve more<br>with Goalboard
         </div>
     </header>
