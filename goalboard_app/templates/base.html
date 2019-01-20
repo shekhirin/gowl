@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% sass_src 'css/style.scss' %}">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900" rel="stylesheet">
-    {# <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script> #}
     <title>{% block title %}{% endblock %}</title>
     {% if not debug %}
         <script>
@@ -33,5 +31,17 @@
 <body>
 {% block content %}
 {% endblock %}
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Nunito:400,700,900' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
 </body>
 </html>
