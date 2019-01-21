@@ -26,3 +26,4 @@ $DJANGODIR/venv/bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
   --workers $NUM_WORKERS \
   --log-level=debug \
   --log-file=-
+  --reload
