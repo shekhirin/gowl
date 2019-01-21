@@ -1,4 +1,5 @@
 from datetime import timedelta, datetime, timezone
+from goalboard_app.settings import SPREADSHEET_UPDATE_RATE
 
 class GoalboardSpreadsheet:
     def __init__(self, user):
@@ -6,7 +7,7 @@ class GoalboardSpreadsheet:
         self.worksheets = self._get_worksheets()
 
     def _get_worksheets(self):
-        if datetime.now(timezone.utc) - self.user.updated > timedelta(minutes=1) or not self.user.spreadsheet_data:
+        if datetime.now(timezone.utc) - self.user.updated > SPREADSHEET_UPDATE_RATE or not self.user.spreadsheet_data:
             self.spreadsheet = self.user.gc.open_by_key(self.user.spreadsheetId)
             self._system = self.spreadsheet.worksheet('system').range('A1:C4')
             self.row_counts = [self._system[i:i + 3] for i in range(0, len(self._system), 3)]

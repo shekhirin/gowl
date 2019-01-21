@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from datetime import timedelta
+
 import raven
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -209,3 +211,5 @@ ACCOUNT_ADAPTER = 'goalboard_app.account_adapter.NoNewUsersAccountAdapter'
 SOCIALACCOUNT_ADAPTER = 'goalboard_app.account_adapter.NoNewUsersSocialAccountAdapter'
 
 INTERNAL_IPS = ['127.0.0.1']
+
+SPREADSHEET_UPDATE_RATE = timedelta(minutes=5)
