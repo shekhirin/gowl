@@ -1,5 +1,5 @@
 from datetime import timedelta, datetime, timezone
-from goalboard_app.settings import SPREADSHEET_UPDATE_RATE
+from goalboard.settings import SPREADSHEET_UPDATE_RATE
 
 class GoalboardSpreadsheet:
     def __init__(self, user):
