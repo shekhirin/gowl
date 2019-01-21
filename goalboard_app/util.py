@@ -1,13 +1,26 @@
-from time import time
+from datetime import timedelta, datetime, timezone
 
 class GoalboardSpreadsheet:
     def __init__(self, user):
-        start = time()
-        self.spreadsheet = user.gc.open_by_key(user.spreadsheetId)
-        self._system = self.spreadsheet.worksheet('system').range('A1:C4')
-        self.row_counts = [self._system[i:i + 3] for i in range(0, len(self._system), 3)]
-        self.worksheets = {row[0].value: [x.value for x in self.spreadsheet.worksheet(row[0].value).range(f'A{int(row[2].value)+1}:E{row[1].value}')] for row in self.row_counts}
-        self.worksheets = {x: [y[i:i+5] for i in range(0, len(y), 5)] for x, y in self.worksheets.items()}
+        self.user = user
+        self.worksheets = self._get_worksheets()
+
+    def _get_worksheets(self):
+        if datetime.now(timezone.utc) - self.user.updated > timedelta(minutes=1) or not self.user.spreadsheet_data:
+            self.spreadsheet = self.user.gc.open_by_key(self.user.spreadsheetId)
+            self._system = self.spreadsheet.worksheet('system').range('A1:C4')
+            self.row_counts = [self._system[i:i + 3] for i in range(0, len(self._system), 3)]
+            self.worksheets = {row[0].value: [x.value for x in self.spreadsheet.worksheet(row[0].value).range(f'A{int(row[2].value)+1}:E{row[1].value}')] for row in self.row_counts}
+            self.worksheets = {x: [y[i:i+5] for i in range(0, len(y), 5)] for x, y in self.worksheets.items()}
+            self._update_user()
+        else:
+            self.worksheets = self.user.spreadsheet_data
+        return self.worksheets
+
+    def _update_user(self):
+        if hasattr(self, 'worksheets') and isinstance(self.worksheets, dict):
+            self.user.spreadsheet_data = self.worksheets
+            self.user.save()
 
     @property
     def whoami(self):
@@ -16,7 +29,6 @@ class GoalboardSpreadsheet:
 
     @property
     def goals(self):
-        start = time()
         worksheet = self.worksheets['goals']
         goals_list = []
         for goal in worksheet:

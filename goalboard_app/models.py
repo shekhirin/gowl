@@ -1,6 +1,7 @@
 import gspread
 from allauth.socialaccount.models import SocialToken
 from django.contrib.auth.models import AbstractUser, UserManager
+from django.contrib.postgres.fields import JSONField
 from django.db import models
 from django.urls import reverse
 from oauth2client.client import AccessTokenCredentials
@@ -18,6 +19,8 @@ class CustomUser(AbstractUser):
     spreadsheetId = models.CharField(max_length=100, blank=True)
     is_username_set = models.BooleanField(default=False)
     is_spreadsheet_set = models.BooleanField(default=False)
+    spreadsheet_data = JSONField(blank=True, null=True)
+    updated = models.DateTimeField(auto_now=True)
 
     @property
     def full_name(self):

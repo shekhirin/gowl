@@ -6,16 +6,11 @@ from goalboard_app.models import CustomUser
 
 class CustomUserAdmin(UserAdmin):
     fieldsets = UserAdmin.fieldsets + (
-        ('Spreadsheet ID', {
-            'fields': ('spreadsheetId',)
+        ('Goalboard', {
+            'fields': ('spreadsheetId', 'is_username_set', 'is_spreadsheet_set', 'updated', 'spreadsheet_data')
         }),
-        ('Is username set', {
-            'fields': ('is_username_set',)
-        }),
-        ('Is spreadsheet set', {
-            'fields': ('is_spreadsheet_set',)
-        })
     )
+    readonly_fields = ('updated', )
 
 
 admin.site.register(CustomUser, CustomUserAdmin)
