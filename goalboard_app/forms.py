@@ -3,7 +3,7 @@ from django.contrib.auth import get_user_model
 
 
 class ProfileForm(forms.ModelForm):
-    username = forms.CharField(max_length=100)
+    username = forms.CharField(max_length=100, label='')
 
     class Meta:
        model = get_user_model()

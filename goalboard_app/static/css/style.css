@@ -22,8 +22,10 @@ header {
 nav {
   padding: 0 25px 0 25px;
   height: 80px;
+  width: 100%;
   line-height: 80px;
-  position: absolute; }
+  position: absolute;
+  margin-bottom: 80px; }
   nav a {
     text-decoration: none;
     color: white; }
@@ -35,27 +37,34 @@ nav {
     font-size: 30px;
     text-transform: uppercase; }
 
+.nav-black {
+  border-bottom: 1px solid; }
+  .nav-black a {
+    color: black; }
+
+.good-green-button {
+  background: #2ED03A;
+  width: 404px;
+  font-size: 35px;
+  font-weight: normal;
+  height: 85px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
+  .good-green-button a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    height: 100%;
+    line-height: 85px; }
+
 .getting-started {
   width: 637px;
   margin: 45px auto 0 auto;
   text-align: center; }
   .getting-started .enjoy-button {
-    background: #2ED03A;
-    width: 404px;
-    font-size: 35px;
-    font-weight: normal;
-    height: 85px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     margin: 0 auto;
     margin-bottom: 40px; }
-    .getting-started .enjoy-button a {
-      text-decoration: none;
-      color: white;
-      display: block;
-      height: 100%;
-      line-height: 85px; }
   .getting-started .headline {
     font-weight: 700;
     font-size: 50px;
@@ -476,5 +485,31 @@ nav {
               color: white; }
             .goalboard .goals .grid .grid-element .container .footer .progress-bar.progress-false {
               color: #d95449; }
+
+.profile {
+  height: 100vh; }
+  .profile form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; }
+    .profile form #id_username {
+      font-family: inherit;
+      height: 90px;
+      width: 635px;
+      font-size: 40px;
+      text-align: left;
+      border-radius: 8px;
+      border-style: solid;
+      border-width: 1px; }
+    .profile form .claim-button {
+      font-family: inherit;
+      color: white;
+      width: 290px;
+      margin: 0 auto;
+      margin-top: 40px; }
+    .profile form *:focus {
+      outline-width: 0; }
 
 /*# sourceMappingURL=style.css.map */

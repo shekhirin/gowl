@@ -4,9 +4,12 @@
 {% block title %}{% title 'Profile' %}{% endblock %}
 
 {% block content %}
-<form method="post" action="{{ request.get_full_path }}">
-  {% csrf_token %}
-  {{ form }}
-  <input type="submit" value="Submit">
-</form>
+{% include 'nav.html' with class="nav-black" %}
+<div class="profile">
+  <form method="post" action="{{ request.get_full_path }}">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Claim!" class="good-green-button claim-button">
+  </form>
+</div>
 {% endblock %}
