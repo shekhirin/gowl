@@ -188,12 +188,12 @@ nav {
 
       @for $i from 0 through 20 {
         .percentage-#{$i} {
-          background-color: mix(#f7c962, #d4584e, percentage($i / 20));
+          background-color: mix(#FF9C36, #FF5858, percentage($i / 20));
         }
       }
       @for $i from 0 through 80 {
         .percentage-#{$i+20} {
-          background-color: mix(#3ec048, #f7c962, percentage($i / 80));
+          background-color: mix(#2FBE3A, #FF9C36, percentage($i / 80));
           padding: 0 !important;
         }
       }
