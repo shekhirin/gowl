@@ -2,6 +2,7 @@ import datetime
 
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from django.core.exceptions import ObjectDoesNotExist
 from oauth2client.client import AccessTokenCredentials
 from allauth.socialaccount.models import SocialToken
 import gspread
@@ -46,12 +47,12 @@ def user_profile(request):
 def user_goalboard(request, username):
     try:
         goalboard_user = CustomUser.objects.get(username=username)
-    except CustomUser.DoesNotExist:
+    except ObjectDoesNotExist:
         return redirect('home')
 
     try:
         spreadsheet = GoalboardSpreadsheet(goalboard_user)
-    except SocialToken.DoesNotExist:
+    except ObjectDoesNotExist:
         return redirect('home')
 
     return render(request, 'user_goalboard.html', {'goalboard_user': goalboard_user, 'spreadsheet': spreadsheet, 'avatar': goalboard_user.socialaccount_set.filter(provider='google')[0].extra_data['picture']})
