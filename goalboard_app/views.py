@@ -72,7 +72,7 @@ def user_spreadsheet(request):
     gc = user.gc
 
     worksheet = gc.copy(file_id='1SOIQWiYGAAxKRPrSqQZSH7AA_OrNhjUW5g2Ib1FahnA', title='🏆 Goalboard Spreadsheet',
-                        copy_permissions=True)
+                        copy_permissions=False)
 
     user.spreadsheetId = worksheet.id
     user.save()
