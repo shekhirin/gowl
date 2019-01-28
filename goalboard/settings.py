@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '$qp1pqmd4a+-$23ujo6)c=-q7w7un3%a-b5kk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", 'FALSE') == 'TRUE'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'www.goalboard.live', 'goalboard.live']
+ALLOWED_HOSTS = ['172.104.239.97', 'localhost', '127.0.0.1', 'www.goalboard.live', 'goalboard.live', 'www.gowl.app', 'gowl.app']
 
 # Application definition
 
