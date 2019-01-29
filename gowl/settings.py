@@ -179,7 +179,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "gowl_app/static/")
 
-SITE_ID = 5
+SITE_ID = 6
 if not DEBUG:
     SITE_ID = 6
 AUTH_USER_MODEL = 'gowl_app.CustomUser'
