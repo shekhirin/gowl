@@ -181,7 +181,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "gowl_app/static/")
 
 SITE_ID = 5
 if not DEBUG:
-    SITE_ID = 5
+    SITE_ID = 6
 AUTH_USER_MODEL = 'gowl_app.CustomUser'
 LOGIN_REDIRECT_URL = '/'
 
