@@ -1,0 +1,515 @@
+html {
+  font-family: 'Nunito', sans-serif; }
+
+html, body {
+  padding: 0;
+  margin: 0; }
+
+header {
+  background: url("../img/header_bg.jpg") no-repeat center;
+  background-size: 100% 100%;
+  height: 605px; }
+  header .header-title {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    font-size: 90px;
+    line-height: 100px; }
+
+nav {
+  padding: 0 25px 0 25px;
+  height: 80px;
+  width: 100%;
+  line-height: 80px;
+  position: absolute;
+  margin-bottom: 80px; }
+  nav a {
+    text-decoration: none;
+    color: white; }
+  nav > * {
+    display: inline;
+    vertical-align: middle;
+    line-height: normal; }
+  nav .logo {
+    font-size: 30px;
+    text-transform: uppercase; }
+
+.nav-black {
+  border-bottom: 1px solid; }
+  .nav-black a {
+    color: black; }
+
+.good-green-button {
+  background: #2ED03A;
+  width: 404px;
+  font-size: 35px;
+  font-weight: normal;
+  height: 85px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
+  .good-green-button a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    height: 100%;
+    line-height: 85px; }
+
+.getting-started {
+  width: 637px;
+  margin: 45px auto 0 auto;
+  text-align: center; }
+  .getting-started .enjoy-button {
+    margin: 0 auto;
+    margin-bottom: 40px; }
+  .getting-started .headline {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px; }
+    .getting-started .headline.done {
+      color: #9B9B9B;
+      opacity: 0.1; }
+  .getting-started hr {
+    margin: 20px 0 20px 0; }
+    .getting-started hr.done {
+      color: #9B9B9B;
+      opacity: 0.1; }
+  .getting-started ul {
+    text-align: left;
+    list-style-type: none;
+    font-weight: normal;
+    font-size: 30px; }
+    .getting-started ul li.active a {
+      color: black; }
+    .getting-started ul li.done, .getting-started ul li.pending {
+      color: #9B9B9B;
+      opacity: 0.1; }
+    .getting-started ul li.done a {
+      text-decoration: line-through; }
+
+.edit-spreadsheet {
+  position: fixed;
+  left: 0;
+  transform-origin: left;
+  top: calc(50% + 100px);
+  transform: translateY(-50%) rotate(-90deg);
+  margin-left: 25px;
+  width: 200px;
+  height: 50px;
+  background-color: #2ED03A;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 20px; }
+
+.gowl {
+  margin: 45px; }
+  .gowl h1 {
+    font-weight: bold;
+    font-size: 75px;
+    text-align: center; }
+  .gowl .whoami .info {
+    height: 240px;
+    display: flex;
+    justify-content: center; }
+    .gowl .whoami .info img {
+      float: left;
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 50%; }
+    .gowl .whoami .info .facts {
+      margin-left: 20px;
+      height: 240px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start; }
+      .gowl .whoami .info .facts h2 {
+        font-size: 50px;
+        font-weight: bold;
+        margin: 0; }
+      .gowl .whoami .info .facts img {
+        float: left;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 50%; }
+      .gowl .whoami .info .facts ul {
+        padding: 0;
+        margin-top: 20px;
+        list-style-type: none; }
+  .gowl .goals .grid {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap; }
+    @media (max-width: 400px) {
+      .gowl .goals .grid {
+        display: block !important; } }
+    .gowl .goals .grid .percentage-0 {
+      background-color: #ff5858; }
+    .gowl .goals .grid .percentage-1 {
+      background-color: #ff5b56; }
+    .gowl .goals .grid .percentage-2 {
+      background-color: #ff5f55; }
+    .gowl .goals .grid .percentage-3 {
+      background-color: #ff6253; }
+    .gowl .goals .grid .percentage-4 {
+      background-color: #ff6651; }
+    .gowl .goals .grid .percentage-5 {
+      background-color: #ff6950; }
+    .gowl .goals .grid .percentage-6 {
+      background-color: #ff6c4e; }
+    .gowl .goals .grid .percentage-7 {
+      background-color: #ff704c; }
+    .gowl .goals .grid .percentage-8 {
+      background-color: #ff734a; }
+    .gowl .goals .grid .percentage-9 {
+      background-color: #ff7749; }
+    .gowl .goals .grid .percentage-10 {
+      background-color: #ff7a47; }
+    .gowl .goals .grid .percentage-11 {
+      background-color: #ff7d45; }
+    .gowl .goals .grid .percentage-12 {
+      background-color: #ff8144; }
+    .gowl .goals .grid .percentage-13 {
+      background-color: #ff8442; }
+    .gowl .goals .grid .percentage-14 {
+      background-color: #ff8840; }
+    .gowl .goals .grid .percentage-15 {
+      background-color: #ff8b3f; }
+    .gowl .goals .grid .percentage-16 {
+      background-color: #ff8e3d; }
+    .gowl .goals .grid .percentage-17 {
+      background-color: #ff923b; }
+    .gowl .goals .grid .percentage-18 {
+      background-color: #ff9539; }
+    .gowl .goals .grid .percentage-19 {
+      background-color: #ff9938; }
+    .gowl .goals .grid .percentage-20 {
+      background-color: #ff9c36; }
+    .gowl .goals .grid .percentage-20 {
+      background-color: #ff9c36;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-21 {
+      background-color: #fc9c36;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-22 {
+      background-color: #fa9d36;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-23 {
+      background-color: #f79d36;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-24 {
+      background-color: #f59e36;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-25 {
+      background-color: #f29e36;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-26 {
+      background-color: #ef9f36;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-27 {
+      background-color: #ed9f36;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-28 {
+      background-color: #ea9f36;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-29 {
+      background-color: #e8a036;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-30 {
+      background-color: #e5a037;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-31 {
+      background-color: #e2a137;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-32 {
+      background-color: #e0a137;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-33 {
+      background-color: #dda237;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-34 {
+      background-color: #dba237;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-35 {
+      background-color: #d8a237;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-36 {
+      background-color: #d5a337;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-37 {
+      background-color: #d3a337;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-38 {
+      background-color: #d0a437;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-39 {
+      background-color: #cea437;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-40 {
+      background-color: #cba537;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-41 {
+      background-color: #c8a537;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-42 {
+      background-color: #c6a537;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-43 {
+      background-color: #c3a637;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-44 {
+      background-color: #c1a637;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-45 {
+      background-color: #bea737;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-46 {
+      background-color: #bba737;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-47 {
+      background-color: #b9a737;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-48 {
+      background-color: #b6a837;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-49 {
+      background-color: #b4a837;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-50 {
+      background-color: #b1a938;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-51 {
+      background-color: #aea938;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-52 {
+      background-color: #acaa38;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-53 {
+      background-color: #a9aa38;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-54 {
+      background-color: #a7aa38;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-55 {
+      background-color: #a4ab38;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-56 {
+      background-color: #a1ab38;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-57 {
+      background-color: #9fac38;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-58 {
+      background-color: #9cac38;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-59 {
+      background-color: #9aad38;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-60 {
+      background-color: #97ad38;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-61 {
+      background-color: #94ad38;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-62 {
+      background-color: #92ae38;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-63 {
+      background-color: #8fae38;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-64 {
+      background-color: #8daf38;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-65 {
+      background-color: #8aaf38;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-66 {
+      background-color: #87b038;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-67 {
+      background-color: #85b038;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-68 {
+      background-color: #82b038;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-69 {
+      background-color: #80b138;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-70 {
+      background-color: #7db139;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-71 {
+      background-color: #7ab239;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-72 {
+      background-color: #78b239;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-73 {
+      background-color: #75b339;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-74 {
+      background-color: #73b339;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-75 {
+      background-color: #70b339;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-76 {
+      background-color: #6db439;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-77 {
+      background-color: #6bb439;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-78 {
+      background-color: #68b539;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-79 {
+      background-color: #66b539;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-80 {
+      background-color: #63b639;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-81 {
+      background-color: #60b639;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-82 {
+      background-color: #5eb639;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-83 {
+      background-color: #5bb739;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-84 {
+      background-color: #59b739;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-85 {
+      background-color: #56b839;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-86 {
+      background-color: #53b839;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-87 {
+      background-color: #51b839;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-88 {
+      background-color: #4eb939;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-89 {
+      background-color: #4cb939;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-90 {
+      background-color: #49ba3a;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-91 {
+      background-color: #46ba3a;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-92 {
+      background-color: #44bb3a;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-93 {
+      background-color: #41bb3a;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-94 {
+      background-color: #3fbb3a;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-95 {
+      background-color: #3cbc3a;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-96 {
+      background-color: #39bc3a;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-97 {
+      background-color: #37bd3a;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-98 {
+      background-color: #34bd3a;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-99 {
+      background-color: #32be3a;
+      padding: 0 !important; }
+    .gowl .goals .grid .percentage-100 {
+      background-color: #2fbe3a;
+      padding: 0 !important; }
+    .gowl .goals .grid .grid-element {
+      width: 400px;
+      height: 230px;
+      border-radius: 20px;
+      position: relative;
+      margin: 0 20px 40px 20px; }
+      @media (max-width: 400px) {
+        .gowl .goals .grid .grid-element {
+          width: 100% !important;
+          margin: 0 0 10px 0 !important; } }
+      .gowl .goals .grid .grid-element .container {
+        margin: 20px; }
+        .gowl .goals .grid .grid-element .container .name {
+          font-weight: bold;
+          font-size: 30px;
+          color: white;
+          letter-spacing: 0; }
+        .gowl .goals .grid .grid-element .container .footer {
+          position: absolute;
+          bottom: 20px; }
+          .gowl .goals .grid .grid-element .container .footer span {
+            color: white;
+            font-size: 25px;
+            padding-bottom: 28px; }
+          .gowl .goals .grid .grid-element .container .footer div {
+            height: 10px; }
+          .gowl .goals .grid .grid-element .container .footer .progress-bar {
+            text-align: center;
+            line-height: 33px;
+            width: 360px;
+            height: 33px;
+            background-color: white;
+            border: 2px solid #FFFFFF;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            z-index: 0; }
+            .gowl .goals .grid .grid-element .container .footer .progress-bar, .gowl .goals .grid .grid-element .container .footer .progress-bar .progress {
+              border-radius: 20px; }
+            .gowl .goals .grid .grid-element .container .footer .progress-bar .progress {
+              padding: 0.01em 16px;
+              height: 100%;
+              width: var(--percentage); }
+            .gowl .goals .grid .grid-element .container .footer .progress-bar.progress-true, .gowl .goals .grid .grid-element .container .footer .progress-bar.progress-false {
+              font-size: 25px; }
+            .gowl .goals .grid .grid-element .container .footer .progress-bar.progress-true {
+              background-color: transparent !important;
+              color: white; }
+            .gowl .goals .grid .grid-element .container .footer .progress-bar.progress-false {
+              color: #d95449; }
+
+.profile {
+  height: 100vh; }
+  .profile form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; }
+    .profile form #id_username {
+      font-family: inherit;
+      height: 90px;
+      width: 635px;
+      font-size: 40px;
+      text-align: left;
+      border-radius: 8px;
+      border-style: solid;
+      border-width: 1px; }
+    .profile form .claim-button {
+      font-family: inherit;
+      color: white;
+      width: 290px;
+      margin: 0 auto;
+      margin-top: 40px; }
+    .profile form *:focus {
+      outline-width: 0; }
+
+/*# sourceMappingURL=style.css.map */

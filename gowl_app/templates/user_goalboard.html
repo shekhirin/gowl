@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load title %}
+
+{% block title %}{% title gowl_user.full_name %}{% endblock %}
+
+{% block content %}
+{% if request.user == gowl_user %}
+<a href="{% url 'user_spreadsheet' %}" class="edit-spreadsheet" target="_blank">
+Edit spreadsheet
+</a>
+{% endif %}
+<div class="gowl">
+  <div class="whoami">
+    <h1>Who am I?</h1>
+    <div class="info">
+      <img src="{{ avatar }}" />
+      <div class="facts">
+        <h2>{{ gowl_user.full_name }}</h2>
+        <ul>
+          {% for fact in spreadsheet.whoami %}
+            <li>{{ fact }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="goals">
+    <h1>My {% now "Y" %} goals</h1>
+    <div class="grid">
+      {% for goal in spreadsheet.goals %}
+      <div class="grid-element percentage-{{ goal.percentage }}">
+        <div class="container">
+          <h2 class="name">{{ goal.name }}</h2>
+          <div class="footer">
+            <span>
+              {% if goal.type == 'measurable' %}
+              {{ goal.done }} out of {{ goal.planned }}
+              {% endif %}
+            </span>
+            <div></div>
+            <div class="progress-bar {% if goal.type == 'binary' %}progress-{{ goal.status|lower }}{% elif goal.type == 'measurable' and goal.percentage == 100 %}progress-true{% endif %}">
+              {% if goal.type == 'measurable' and goal.percentage < 100 %}
+                <div class="progress percentage-{{ goal.percentage }}" style="--percentage: {{ goal.percentage }}%;">
+                  {# {{ goal.percentage }}% #}
+                </div>
+              {% else %}
+                {% if goal.percentage == 100 %}
+                Done
+                {% else %}
+                In progress
+                {% endif %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,1 +1,1 @@
-# goalboard
+# gowl

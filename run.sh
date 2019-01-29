@@ -1,10 +1,10 @@
 #!/bin/sh
 #!/bin/bash
 
-NAME="goalboard_app"
-DJANGODIR=/root/goalboard
+NAME="gowl_app"
+DJANGODIR=/root/gowl
 NUM_WORKERS=3
-DJANGO_WSGI_MODULE=goalboard.wsgi
+DJANGO_WSGI_MODULE=gowl.wsgi
 
 echo "Starting $NAME"
 
@@ -12,7 +12,7 @@ cd $DJANGODIR
 source venv/bin/activate
 pip install -r requirements.txt
 python manage.py collectstatic --noinput
-export DJANGO_SETTINGS_MODULE=goalboard.settings
+export DJANGO_SETTINGS_MODULE=gowl.settings
 export PYTHONPATH=$DJANGODIR:$PYTHONPATH
 
 set -a
