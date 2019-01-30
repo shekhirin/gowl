@@ -80,3 +80,9 @@ def user_spreadsheet(request):
     request.user = user
 
     return redirect(f'https://docs.google.com/spreadsheets/d/{user.spreadsheetId}')
+
+def privacy_policy(request):
+    return render(request, 'privacy_policy.html')
+
+def terms_of_service(request):
+    return render(request, 'terms_of_service.html')
