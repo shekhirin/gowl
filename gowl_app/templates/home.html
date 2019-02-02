@@ -7,38 +7,61 @@
 {% block title %}{% title %}{% endblock %}
 
 {% block content %}
+    {% include 'nav.html' %}
     <header>
-        {% include 'nav.html' %}
-        {#        <img src="{% static 'img/header_bg.jpg' %}" alt=""/>#}
-        <div class="header-title">
-            {% trans 'Achieve more with Gowl' %}
+        <div class="captions">
+            <p>{% blocktrans %}We simplified <span>list of goals</span>{%endblocktrans%}</p>
+            <p>{% blocktrans %}Made it open to <span>public</span>{%endblocktrans%}</p>
+            <p>{% blocktrans %}And called it <span>Gowl</span>{%endblocktrans%}</p>
+        </div>
+        <div class="cta">
+            <img src="{% static 'img/logo.png' %}" />
+            <a href="#" class="cta-button">
+                <div>
+                    <span>{% trans 'Create Gowl for free' %}</span>
+                </div>
+            </a>
         </div>
     </header>
-    <div class="main getting-started">
-        {% if states.2 == 'done' %}
-          <div class="good-green-button enjoy-button">
-            <a href="{{ user.gowl_url }}">{% trans 'Enjoy your Gowl' %}</a>
-          </div>
-        {% endif %}
-
-        <span class="headline {{ states.2 }}">
-            {% trans 'Just a few steps to become more motivated' %}
-        </span>
-        <hr class="{{ states.2 }}">
-        <ul>
-            <li class="{{ states.0 }}">
-                {% if states.0 == 'done' %}✅{% elif states.0 == 'active' %}👉{% else %}⏳{% endif %}
-                1. {% trans 'Login with Google' %}
-                <a {% if states.0 == 'active' %}href="/google/login/?process=login"{% endif %}><img src="{% static 'img/btn_google_signin_light_normal_web@2x.png' %}" /></a>
-            </li>
-            <li class="{{ states.1 }}">
-                {% if states.1 == 'done' %}✅{% elif states.1 == 'active' %}👉{% else %}⏳{% endif %}
-                <a {% if states.1 == 'active' %}href="{% url 'user_spreadsheet' %}" target="_blank" onclick="window.setTimeout(function(){ window.location.reload() }, 5000);"{% endif %}>2. {% trans 'Open and edit Spreadsheet' %}</a>
-            </li>
-            <li class="{{ states.2 }}">
-                {% if states.2 == 'done' %}✅{% elif states.2 == 'active' %}👉{% else %}⏳{% endif %}
-                <a {% if states.2 == 'active' %}href="{% url 'user_profile' %}?next=/"{% endif %}>3. {% trans 'Pick a username' %}</a>
-            </li>
-        </ul>
-    </div>
+    <main>
+        <h1>{% trans 'Why do I need that?' %}</h1>
+        <div class="whyneed">
+            <div class="reason">
+                <div>
+                    <h2>{% trans 'SMART goal setting' %}</h2>
+                    <span>{% trans 'Set measureable goals and track your results' %}</span>
+                </div>
+                <div>
+                    <img src="{% static 'img/Bulb.svg' %}" />
+                </div>
+            </div>
+            <div class="reason">
+                <div>
+                    <img src="{% static 'img/Globe.svg' %}"/>
+                </div>
+                <div>
+                    <h2>{% trans 'Share your goals' %}</h2>
+                    <span>{% trans 'Tell your friends and collegues about your Gowl so you have extra motivation' %}</span>
+                </div>
+            </div>
+            <div class="reason">
+                <div>
+                    <h2>{% trans 'No security worries' %}</h2>
+                    <span>{% trans 'We use all oAuth to access your spreadsheet so you can restrict access any time' %}</span>
+                </div>
+                <div>
+                    <img src="{% static 'img/Security.svg' %}"/>
+                </div>
+            </div>
+            <div class="reason">
+                <div>
+                    <img src="{% static 'img/2 + 2.svg' %}"/>
+                </div>
+                <div>
+                    <h2>{% trans 'Manage with ease' %}</h2>
+                    <span>{% trans 'All your goals and measurements are in a single Google Spreadsheet' %}</span>
+                </div>
+            </div>
+        </div>
+    </main>
 {% endblock %}

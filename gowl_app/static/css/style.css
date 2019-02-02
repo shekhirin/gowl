@@ -8,101 +8,126 @@
   font-weight: bold;
   src: local("GT-Eesti"), url("../fonts/GT-Eesti-Pro-Display-Bold.OTF") format("opentype"); }
 
+@font-face {
+  font-family: 'GT-Eesti';
+  font-weight: 500;
+  src: local("GT-Eesti"), url("../fonts/GT-Eesti-Pro-Display-Medium.OTF") format("opentype"); }
+
+@font-face {
+  font-family: 'GT-Eesti';
+  font-weight: 200;
+  src: local("GT-Eesti"), url("../fonts/GT-Eesti-Pro-Display-Light.OTF") format("opentype"); }
+
 html {
   font-family: 'GT-Eesti', sans-serif; }
 
 html, body {
   padding: 0;
   margin: 0; }
-
-header {
-  background: url("../img/header_bg.jpg") no-repeat center;
-  background-size: 100% 100%;
-  height: 605px; }
-  header .header-title {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: white;
-    font-weight: 900;
-    font-size: 90px;
-    line-height: 100px; }
+  html, html a, body, body a {
+    color: #1C2C40; }
 
 nav {
-  height: 80px;
+  text-align: center;
+  height: 75px;
   width: 100%;
-  line-height: 80px;
-  position: absolute;
-  margin-bottom: 80px; }
+  line-height: 75px; }
   nav a {
-    text-decoration: none;
-    color: white;
-    padding-left: 25px; }
+    text-decoration: none; }
   nav > * {
     display: inline;
     vertical-align: middle;
     line-height: normal; }
   nav .logo {
-    font-size: 30px;
-    text-transform: uppercase; }
+    left: 0;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 75px;
+    position: absolute;
+    padding-left: 25px; }
+  nav .items {
+    display: inline-block; }
+    nav .items .item {
+      font-size: 25px;
+      text-transform: lowercase;
+      text-align: center;
+      margin-left: 10px;
+      margin-right: 10px; }
 
 .nav-black {
   border-bottom: 1px solid; }
   .nav-black a {
     color: black; }
 
-.good-green-button {
-  background: #2ED03A;
-  width: 404px;
-  font-size: 35px;
-  font-weight: normal;
-  height: 85px;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
-  .good-green-button a {
-    text-decoration: none;
-    color: white;
-    display: block;
-    height: 100%;
-    line-height: 85px; }
+header {
+  height: 300px;
+  margin-top: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  header .captions {
+    margin-right: 175px; }
+    header .captions p {
+      font-size: 50px; }
+      header .captions p span {
+        font-weight: bold; }
+  header .cta {
+    display: flex;
+    flex-flow: column;
+    align-items: center; }
+    header .cta img {
+      width: 210px;
+      margin-bottom: 24px; }
+    header .cta .cta-button, header .cta .cta-button div {
+      background-color: #1C2C40;
+      text-align: center;
+      height: 60px;
+      width: 350px;
+      text-decoration: none; }
+    header .cta .cta-button span {
+      color: white;
+      font-size: 25px;
+      text-transform: uppercase;
+      line-height: 60px; }
 
-.getting-started {
-  width: 637px;
-  margin: 45px auto 0 auto;
-  text-align: center; }
-  .getting-started .enjoy-button {
-    margin: 0 auto;
-    margin-bottom: 40px; }
-  .getting-started .headline {
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 60px; }
-    .getting-started .headline.done {
-      color: #9B9B9B;
-      opacity: 0.1; }
-  .getting-started hr {
-    margin: 20px 0 20px 0; }
-    .getting-started hr.done {
-      color: #9B9B9B;
-      opacity: 0.1; }
-  .getting-started ul {
-    text-align: left;
-    list-style-type: none;
-    font-weight: normal;
-    font-size: 30px; }
-    .getting-started ul li.active a {
-      color: black; }
-    .getting-started ul li.active img {
-      width: 250px;
-      display: block;
-      margin: auto; }
-    .getting-started ul li.done, .getting-started ul li.pending {
-      color: #9B9B9B;
-      opacity: 0.1; }
-    .getting-started ul li.done a {
-      text-decoration: line-through; }
+main {
+  margin-top: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  main h1 {
+    font-size: 70px;
+    font-weight: bold; }
+  main .whyneed .reason {
+    margin-top: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    main .whyneed .reason:nth-child(1) {
+      margin-top: 0; }
+    main .whyneed .reason:nth-child(odd) {
+      text-align: right; }
+      main .whyneed .reason:nth-child(odd) div h2 span {
+        float: right; }
+    main .whyneed .reason:nth-child(even) {
+      text-align: left; }
+      main .whyneed .reason:nth-child(even) div h2 span {
+        float: left; }
+    main .whyneed .reason div {
+      width: 450px;
+      margin: 0 30px 0 30px; }
+      main .whyneed .reason div h2 {
+        margin: 0;
+        margin-bottom: 20px;
+        font-weight: normal;
+        font-size: 50px; }
+      main .whyneed .reason div span {
+        font-weight: 200;
+        font-size: 25px;
+        width: 300px; }
+      main .whyneed .reason div img {
+        display: block;
+        margin: auto; }
 
 .edit-spreadsheet {
   position: fixed;
