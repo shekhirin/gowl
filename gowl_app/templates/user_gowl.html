@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
 {% load title %}
+{% load i18n %}
 
 {% block title %}{% title gowl_user.full_name %}{% endblock %}
 
 {% block content %}
 {% if request.user == gowl_user %}
 <a href="{% url 'user_spreadsheet' %}" class="edit-spreadsheet" target="_blank">
-Edit spreadsheet
+{% trans 'Edit spreadsheet' %}
 </a>
 {% endif %}
 <div class="gowl">
   <div class="whoami">
-    <h1>Who am I?</h1>
+    <h1>{% trans 'Who am I?' %}</h1>
     <div class="info">
       <img src="{{ avatar }}" />
       <div class="facts">
@@ -25,7 +26,7 @@ Edit spreadsheet
     </div>
   </div>
   <div class="goals">
-    <h1>My {% now "Y" %} goals</h1>
+    <h1>{% blocktrans %}My {{ year }} goals{% endblocktrans %}</h1>
     <div class="grid">
       {% for goal in spreadsheet.goals %}
       <div class="grid-element percentage-{{ goal.percentage }}">
@@ -34,7 +35,7 @@ Edit spreadsheet
           <div class="footer">
             <span>
               {% if goal.type == 'measurable' %}
-              {{ goal.done }} out of {{ goal.planned }}
+              {{ goal.done }} {% trans 'out of' %} {{ goal.planned }}
               {% endif %}
             </span>
             <div></div>
@@ -45,9 +46,9 @@ Edit spreadsheet
                 </div>
               {% else %}
                 {% if goal.percentage == 100 %}
-                Done
+                {% trans 'Done' %}
                 {% else %}
-                In progress
+                {% trans 'In progress' %}
                 {% endif %}
               {% endif %}
             </div>

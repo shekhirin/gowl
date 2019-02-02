@@ -12,6 +12,7 @@ from gowl_app.forms import ProfileForm
 from gowl_app.util import GowlSpreadsheet
 
 from time import time
+import datetime
 
 
 def home(request):
@@ -55,7 +56,16 @@ def user_gowl(request, username):
     except ObjectDoesNotExist:
         return redirect('home')
 
-    return render(request, 'user_gowl.html', {'gowl_user': gowl_user, 'spreadsheet': spreadsheet, 'avatar': gowl_user.socialaccount_set.filter(provider='google')[0].extra_data['picture']})
+    return render(
+        request, 
+        'user_gowl.html', 
+        {
+            'gowl_user': gowl_user, 
+            'spreadsheet': spreadsheet, 
+            'avatar': gowl_user.socialaccount_set.filter(provider='google')[0].extra_data['picture'],
+            'year': datetime.datetime.now().year
+        }
+    )
 
 
 def user_spreadsheet(request):

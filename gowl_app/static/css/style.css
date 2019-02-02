@@ -1,5 +1,15 @@
+@font-face {
+  font-family: 'GT-Eesti';
+  font-weight: normal;
+  src: local("GT-Eesti"), url("../fonts/GT-Eesti-Pro-Display-Regular.OTF") format("opentype"); }
+
+@font-face {
+  font-family: 'GT-Eesti';
+  font-weight: bold;
+  src: local("GT-Eesti"), url("../fonts/GT-Eesti-Pro-Display-Bold.OTF") format("opentype"); }
+
 html {
-  font-family: 'Nunito', sans-serif; }
+  font-family: 'GT-Eesti', sans-serif; }
 
 html, body {
   padding: 0;
@@ -20,7 +30,6 @@ header {
     line-height: 100px; }
 
 nav {
-  padding: 0 25px 0 25px;
   height: 80px;
   width: 100%;
   line-height: 80px;
@@ -28,7 +37,8 @@ nav {
   margin-bottom: 80px; }
   nav a {
     text-decoration: none;
-    color: white; }
+    color: white;
+    padding-left: 25px; }
   nav > * {
     display: inline;
     vertical-align: middle;
@@ -84,6 +94,10 @@ nav {
     font-size: 30px; }
     .getting-started ul li.active a {
       color: black; }
+    .getting-started ul li.active img {
+      width: 250px;
+      display: block;
+      margin: auto; }
     .getting-started ul li.done, .getting-started ul li.pending {
       color: #9B9B9B;
       opacity: 0.1; }

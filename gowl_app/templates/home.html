@@ -2,6 +2,7 @@
 {% load title %}
 {% load socialaccount %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}{% title %}{% endblock %}
 
@@ -9,32 +10,34 @@
     <header>
         {% include 'nav.html' %}
         {#        <img src="{% static 'img/header_bg.jpg' %}" alt=""/>#}
-        <div class="header-title">Achieve more<br>with Gowl
+        <div class="header-title">
+            {% trans 'Achieve more with Gowl' %}
         </div>
     </header>
     <div class="main getting-started">
         {% if states.2 == 'done' %}
           <div class="good-green-button enjoy-button">
-            <a href="{{ user.gowl_url }}">Enjoy your Gowl</a>
+            <a href="{{ user.gowl_url }}">{% trans 'Enjoy your Gowl' %}</a>
           </div>
         {% endif %}
 
         <span class="headline {{ states.2 }}">
-            Just a few steps to become<br>more motivated
+            {% trans 'Just a few steps to become more motivated' %}
         </span>
         <hr class="{{ states.2 }}">
         <ul>
             <li class="{{ states.0 }}">
                 {% if states.0 == 'done' %}✅{% elif states.0 == 'active' %}👉{% else %}⏳{% endif %}
-                <a {% if states.0 == 'active' %}href="/google/login/?process=login"{% endif %}>1. Login with Google</a>
+                1. {% trans 'Login with Google' %}
+                <a {% if states.0 == 'active' %}href="/google/login/?process=login"{% endif %}><img src="{% static 'img/btn_google_signin_light_normal_web@2x.png' %}" /></a>
             </li>
             <li class="{{ states.1 }}">
                 {% if states.1 == 'done' %}✅{% elif states.1 == 'active' %}👉{% else %}⏳{% endif %}
-                <a {% if states.1 == 'active' %}href="{% url 'user_spreadsheet' %}" target="_blank" onclick="window.setTimeout(function(){ window.location.reload() }, 5000);"{% endif %}>2. Open and edit Spreadsheet</a>
+                <a {% if states.1 == 'active' %}href="{% url 'user_spreadsheet' %}" target="_blank" onclick="window.setTimeout(function(){ window.location.reload() }, 5000);"{% endif %}>2. {% trans 'Open and edit Spreadsheet' %}</a>
             </li>
             <li class="{{ states.2 }}">
                 {% if states.2 == 'done' %}✅{% elif states.2 == 'active' %}👉{% else %}⏳{% endif %}
-                <a {% if states.2 == 'active' %}href="{% url 'user_profile' %}?next=/"{% endif %}>3. Pick a username</a>
+                <a {% if states.2 == 'active' %}href="{% url 'user_profile' %}?next=/"{% endif %}>3. {% trans 'Pick a username' %}</a>
             </li>
         </ul>
     </div>

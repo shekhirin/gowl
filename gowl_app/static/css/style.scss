@@ -1,5 +1,17 @@
+@font-face {
+  font-family: 'GT-Eesti';
+  font-weight: normal;
+  src: local('GT-Eesti'), url('../fonts/GT-Eesti-Pro-Display-Regular.OTF') format('opentype');
+}
+
+@font-face {
+  font-family: 'GT-Eesti';
+  font-weight: bold;
+  src: local('GT-Eesti'), url('../fonts/GT-Eesti-Pro-Display-Bold.OTF') format('opentype');
+}
+
 html {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'GT-Eesti', sans-serif;
 }
 
 html, body {
@@ -25,7 +37,6 @@ header {
 }
 
 nav {
-  padding: 0 25px 0 25px;
   height: 80px;
   width: 100%;
   line-height: 80px;
@@ -35,6 +46,7 @@ nav {
   a {
     text-decoration: none;
     color: white;
+    padding-left: 25px;
   }
 
   > * {
@@ -72,7 +84,12 @@ nav {
   height: 85px;
   text-align: center;
   border-radius: 8px;
+
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+  
+  // &:hover {
+  //   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+  // }
 }
 
 .getting-started {
@@ -111,8 +128,15 @@ nav {
     font-size: 30px;
 
     li {
-      &.active a {
-        color: black;
+      &.active {
+        a {
+          color: black;
+        }
+        img {
+          width: 250px;
+          display: block;
+          margin: auto;
+        }
       }
       &.done, &.pending {
         color: #9B9B9B;

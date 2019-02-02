@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-02 13:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: templates/home.html:14
+msgid "Achieve more with Gowl"
+msgstr "Достигайте большего с Gowl"
+
+#: templates/home.html:20
+msgid "Enjoy your Gowl"
+msgstr "Ваш Gowl готов"
+
+#: templates/home.html:25
+msgid "Just a few steps to become more motivated"
+msgstr "Всего пара шагов, чтобы замотивировать себя"
+
+#: templates/home.html:31
+msgid "Login with Google"
+msgstr "Залогиньтесь с помощью Google"
+
+#: templates/home.html:35
+msgid "Open and edit Spreadsheet"
+msgstr "Откройте и отредактируйте таблицу"
+
+#: templates/home.html:39
+msgid "Pick a username"
+msgstr "Выберите никнейм"
+
+#: templates/user_gowl.html:10
+msgid "Edit spreadsheet"
+msgstr "Редактировать"
+
+#: templates/user_gowl.html:15
+msgid "Who am I?"
+msgstr "Кто я?"
+
+#: templates/user_gowl.html:29
+#, python-format
+msgid "My %(year)s goals"
+msgstr "Мои цели на %(year)s год"
+
+#: templates/user_gowl.html:38
+msgid "out of"
+msgstr "из"
+
+#: templates/user_gowl.html:49
+msgid "Done"
+msgstr "Готово"
+
+#: templates/user_gowl.html:51
+msgid "In progress"
+msgstr "В процессе"
+
+#: templates/user_profile.html:12
+msgid "Claim!"
+msgstr "Занять!"
