@@ -51,13 +51,8 @@ nav {
       font-size: 25px;
       text-transform: lowercase;
       text-align: center;
-      margin-left: 10px;
-      margin-right: 10px; }
-
-.nav-black {
-  border-bottom: 1px solid; }
-  .nav-black a {
-    color: black; }
+      margin-left: 50px;
+      margin-right: 50px; }
 
 header {
   height: 300px;
@@ -79,11 +74,17 @@ header {
       width: 210px;
       margin-bottom: 24px; }
     header .cta .cta-button, header .cta .cta-button div {
-      background-color: #1C2C40;
+      -moz-transition: all .1s ease-in;
+      -o-transition: all .1s ease-in;
+      -webkit-transition: all .1s ease-in;
+      transition: all .1s ease-in;
+      background-color: #266df0;
       text-align: center;
       height: 60px;
       width: 350px;
       text-decoration: none; }
+    header .cta .cta-button:hover, header .cta .cta-button div:hover {
+      background: #115be4; }
     header .cta .cta-button span {
       color: white;
       font-size: 25px;

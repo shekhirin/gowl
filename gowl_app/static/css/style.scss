@@ -22,6 +22,10 @@
   src: local('GT-Eesti'), url('../fonts/GT-Eesti-Pro-Display-Light.OTF') format('opentype');
 }
 
+$color-main: #1C2C40;
+$color-second: #266df0;
+$color-second-darken: #115be4;
+
 html {
   font-family: 'GT-Eesti', sans-serif;
 }
@@ -30,7 +34,7 @@ html, body {
   padding: 0;
   margin: 0;
   &, a {
-    color: #1C2C40;
+    color: $color-main;
   }
 }
 
@@ -65,16 +69,9 @@ nav {
       font-size: 25px;
       text-transform: lowercase;
       text-align: center;
-      margin-left: 10px;
-      margin-right: 10px;
+      margin-left: 50px;
+      margin-right: 50px;
     }
-  }
-}
-
-.nav-black {
-  border-bottom: 1px solid;
-  a {
-    color: black;
   }
 }
 
@@ -105,11 +102,18 @@ header {
     }
     .cta-button {
       &, & div {
-        background-color: #1C2C40;
+        -moz-transition: all .1s ease-in;
+        -o-transition: all .1s ease-in;
+        -webkit-transition: all .1s ease-in;
+        transition: all .1s ease-in;
+        background-color: $color-second;
         text-align: center;
         height: 60px;
         width: 350px;
         text-decoration: none;
+      }
+      &:hover, & div:hover {
+        background: $color-second-darken;
       }
       span {
         color: white;
