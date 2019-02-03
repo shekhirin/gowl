@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-03 10:58+0000\n"
+"POT-Creation-Date: 2019-02-03 12:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,7 +59,9 @@ msgstr "Делитесь с друзьями"
 #: templates/home.html:50
 msgid ""
 "Tell your friends and collegues about your Gowl so you have extra motivation"
-msgstr "Расскажите своим друзьям и коллегам о Gowl, чтобы они отслеживали ваш прогресс"
+msgstr ""
+"Расскажите своим друзьям и коллегам о Gowl, чтобы они отслеживали ваш "
+"прогресс"
 
 #: templates/home.html:55
 msgid "No security worries"
@@ -67,9 +69,10 @@ msgstr "Безопасно"
 
 #: templates/home.html:56
 msgid ""
-"We use all oAuth to access your spreadsheet so you can restrict access any "
-"time"
-msgstr "Мы используем oAuth, чтобы получать информацию из таблицы, так что вы можете ограничить доступ в любой момент"
+"We use oAuth to access your spreadsheet so you can restrict access any time"
+msgstr ""
+"Мы используем oAuth, чтобы получать информацию из таблицы, так что вы можете "
+"ограничить доступ в любой момент"
 
 #: templates/home.html:67
 msgid "Manage with ease"
