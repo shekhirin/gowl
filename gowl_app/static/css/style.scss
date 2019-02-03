@@ -26,6 +26,13 @@ $color-main: #1C2C40;
 $color-second: #266df0;
 $color-second-darken: #115be4;
 
+@mixin transition {
+  -moz-transition: all .1s ease-in;
+  -o-transition: all .1s ease-in;
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+}
+
 html {
   font-family: 'GT-Eesti', sans-serif;
   scroll-behavior: smooth;
@@ -103,10 +110,7 @@ header {
     }
     .cta-button {
       &, & div {
-        -moz-transition: all .1s ease-in;
-        -o-transition: all .1s ease-in;
-        -webkit-transition: all .1s ease-in;
-        transition: all .1s ease-in;
+        @include transition;
         background-color: $color-second;
         text-align: center;
         height: 60px;
@@ -192,6 +196,7 @@ main {
 
   .examples {
     .example {
+      @include transition;
       text-decoration: none;
       display: flex;
       align-items: center;
@@ -202,6 +207,12 @@ main {
       -webkit-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
       -moz-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
       box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
+
+      &:hover {
+        -webkit-box-shadow: 0px 0px 20px -5px rgba(0,0,0,1);
+        -moz-box-shadow: 0px 0px 20px -5px rgba(0,0,0,1);
+        box-shadow: 0px 0px 20px -5px rgba(0,0,0,1);
+      }
     }
   }
 
@@ -249,7 +260,11 @@ main {
   margin-left: 25px;
   width: 200px;
   height: 50px;
-  background-color: #2ED03A;
+  @include transition;
+  background-color: $color-second;
+  &:hover {
+    background-color: $color-second-darken;
+  }
   color: white;
   text-align: center;
   line-height: 50px;
