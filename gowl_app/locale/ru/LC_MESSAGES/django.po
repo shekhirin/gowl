@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-02 13:13+0000\n"
+"POT-Creation-Date: 2019-02-03 10:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,27 +20,78 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
+#: templates/home.html:13
+msgid "We simplified <span>list of goals</span>"
+msgstr "Мы упростили <span>список целей</span>"
+
 #: templates/home.html:14
-msgid "Achieve more with Gowl"
-msgstr "Достигайте большего с Gowl"
+msgid "Made it open to <span>public</span>"
+msgstr "Сделали его доступным <span>публично</span>"
 
-#: templates/home.html:20
-msgid "Enjoy your Gowl"
-msgstr "Ваш Gowl готов"
+#: templates/home.html:15
+msgid "And called it <span>Gowl</span>"
+msgstr "И назвали это <span>Gowl</span>"
 
-#: templates/home.html:25
-msgid "Just a few steps to become more motivated"
-msgstr "Всего пара шагов, чтобы замотивировать себя"
+#: templates/home.html:21
+msgid "Create Gowl for free"
+msgstr "Создайте свой Gowl"
 
-#: templates/home.html:31
+#: templates/home.html:27
+msgid "Examples"
+msgstr "Примеры"
+
+#: templates/home.html:33
+msgid "Why do you need that?"
+msgstr "Зачем тебе это нужно?"
+
+#: templates/home.html:37
+msgid "SMART goal setting"
+msgstr "Используйте SMART"
+
+#: templates/home.html:38
+msgid "Set measureable goals and track your results"
+msgstr "Ставьте измеримые цели и отслеживайте свои результаты"
+
+#: templates/home.html:49
+msgid "Share your goals"
+msgstr "Делитесь с друзьями"
+
+#: templates/home.html:50
+msgid ""
+"Tell your friends and collegues about your Gowl so you have extra motivation"
+msgstr "Расскажите своим друзьям и коллегам о Gowl, чтобы они отслеживали ваш прогресс"
+
+#: templates/home.html:55
+msgid "No security worries"
+msgstr "Безопасно"
+
+#: templates/home.html:56
+msgid ""
+"We use all oAuth to access your spreadsheet so you can restrict access any "
+"time"
+msgstr "Мы используем oAuth, чтобы получать информацию из таблицы, так что вы можете ограничить доступ в любой момент"
+
+#: templates/home.html:67
+msgid "Manage with ease"
+msgstr "Управляйте с легкостью"
+
+#: templates/home.html:68
+msgid "All your goals and measurements are in a single Google Spreadsheet"
+msgstr "Все ваши цели и измерения находятся в единой таблице"
+
+#: templates/home.html:73
+msgid "Getting started"
+msgstr "Начало работы"
+
+#: templates/home.html:78
 msgid "Login with Google"
 msgstr "Залогиньтесь с помощью Google"
 
-#: templates/home.html:35
+#: templates/home.html:82
 msgid "Open and edit Spreadsheet"
 msgstr "Откройте и отредактируйте таблицу"
 
-#: templates/home.html:39
+#: templates/home.html:86
 msgid "Pick a username"
 msgstr "Выберите никнейм"
 
@@ -69,6 +120,15 @@ msgstr "Готово"
 msgid "In progress"
 msgstr "В процессе"
 
-#: templates/user_profile.html:12
+#: templates/user_profile.html:13
 msgid "Claim!"
 msgstr "Занять!"
+
+#~ msgid "Achieve more with Gowl"
+#~ msgstr "Достигайте большего с Gowl"
+
+#~ msgid "Enjoy your Gowl"
+#~ msgstr "Ваш Gowl готов"
+
+#~ msgid "Just a few steps to become more motivated"
+#~ msgstr "Всего пара шагов, чтобы замотивировать себя"
