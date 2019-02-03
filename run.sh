@@ -19,7 +19,7 @@ set -a
 set +a
 
 python manage.py migrate
-python manage.py collectstatic --noinput
+python manage.py collectstatic --noinput --clear
 
 $DJANGODIR/venv/bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
   --name $NAME \
