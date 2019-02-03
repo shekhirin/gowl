@@ -10,7 +10,7 @@
   <form method="post" action="{{ request.get_full_path }}">
     {% csrf_token %}
     {{ form }}
-    <input type="submit" value="{% trans 'Claim!' %}" class="good-green-button claim-button">
+    <input type="submit" value="{% trans 'Claim!' %}">
   </form>
 </div>
 {% endblock %}

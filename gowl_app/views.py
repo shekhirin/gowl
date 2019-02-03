@@ -5,7 +5,6 @@ from django.shortcuts import render, redirect
 from django.core.exceptions import ObjectDoesNotExist
 from oauth2client.client import AccessTokenCredentials
 from allauth.socialaccount.models import SocialToken
-import gspread
 
 from gowl_app.models import CustomUser
 from gowl_app.forms import ProfileForm
