@@ -25,4 +25,5 @@ $DJANGODIR/venv/bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
   --name $NAME \
   --workers $NUM_WORKERS \
   --log-level=debug \
-  --log-file=-
+  --log-file=- \
+  --bind=127.0.0.1:$1
