@@ -28,6 +28,7 @@ $color-second-darken: #115be4;
 
 html {
   font-family: 'GT-Eesti', sans-serif;
+  scroll-behavior: smooth;
 }
 
 html, body {
@@ -111,9 +112,15 @@ header {
         height: 60px;
         width: 350px;
         text-decoration: none;
+        -webkit-box-shadow: 0px 0px 15px -5px $color-second;
+        -moz-box-shadow: 0px 0px 15px -5px $color-second;
+        box-shadow: 0px 0px 15px -5px $color-second;
       }
       &:hover, & div:hover {
         background: $color-second-darken;
+        -webkit-box-shadow: 0px 0px 15px -5px $color-second-darken;
+        -moz-box-shadow: 0px 0px 15px -5px $color-second-darken;
+        box-shadow: 0px 0px 15px -5px $color-second-darken;
       }
       span {
         color: white;
@@ -126,12 +133,12 @@ header {
 }
 
 main {
-  margin-top: 150px;
   display: flex;
   align-items: center;
   flex-direction: column;
 
   h1 {
+    margin-top: 150px;
     font-size: 70px;
     font-weight: bold;
   }
@@ -177,8 +184,24 @@ main {
         img {
           display: block;
           margin: auto;
+          height: 180px;
         }
       }
+    }
+  }
+
+  .examples {
+    .example {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      img {
+        width: 500px; 
+      }
+      -webkit-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
+      -moz-box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
+      box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
     }
   }
 }

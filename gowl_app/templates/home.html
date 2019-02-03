@@ -16,7 +16,7 @@
         </div>
         <div class="cta">
             <img src="{% static 'img/logo.png' %}" />
-            <a href="#" class="cta-button">
+            <a href="#gettingstarted" class="cta-button">
                 <div>
                     <span>{% trans 'Create Gowl for free' %}</span>
                 </div>
@@ -24,6 +24,12 @@
         </div>
     </header>
     <main>
+        <h1>{% trans 'Examples' %}</h1>
+        <div class="examples">
+            <a href="{% url 'user_gowl' username='shekhirin' %}" class="example">
+                <img src="{% static 'img/example-1.jpg' %}" />
+            </a>
+        </div>
         <h1>{% trans 'Why do you need that?' %}</h1>
         <div class="whyneed">
             <div class="reason">
@@ -32,12 +38,12 @@
                     <span>{% trans 'Set measureable goals and track your results' %}</span>
                 </div>
                 <div>
-                    <img src="{% static 'img/Bulb.svg' %}" />
+                    <img src="{% static 'img/bulb min.svg' %}" />
                 </div>
             </div>
             <div class="reason">
                 <div>
-                    <img src="{% static 'img/Globe.svg' %}"/>
+                    <img src="{% static 'img/globe min.svg' %}"/>
                 </div>
                 <div>
                     <h2>{% trans 'Share your goals' %}</h2>
@@ -50,18 +56,23 @@
                     <span>{% trans 'We use all oAuth to access your spreadsheet so you can restrict access any time' %}</span>
                 </div>
                 <div>
-                    <img src="{% static 'img/Security.svg' %}"/>
+                    <img src="{% static 'img/security min.svg' %}"/>
                 </div>
             </div>
             <div class="reason">
                 <div>
-                    <img src="{% static 'img/2 + 2.svg' %}"/>
+                    <img src="{% static 'img/2 + 2 min.svg' %}"/>
                 </div>
                 <div>
                     <h2>{% trans 'Manage with ease' %}</h2>
                     <span>{% trans 'All your goals and measurements are in a single Google Spreadsheet' %}</span>
                 </div>
             </div>
+        </div>
+
+        <h1 id="gettingstarted">{% trans 'Getting started' %}</h1>
+        <div class="gettingstarted">
+            
         </div>
     </main>
 {% endblock %}

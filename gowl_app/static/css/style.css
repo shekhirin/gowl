@@ -19,7 +19,8 @@
   src: local("GT-Eesti"), url("../fonts/GT-Eesti-Pro-Display-Light.OTF") format("opentype"); }
 
 html {
-  font-family: 'GT-Eesti', sans-serif; }
+  font-family: 'GT-Eesti', sans-serif;
+  scroll-behavior: smooth; }
 
 html, body {
   padding: 0;
@@ -82,9 +83,15 @@ header {
       text-align: center;
       height: 60px;
       width: 350px;
-      text-decoration: none; }
+      text-decoration: none;
+      -webkit-box-shadow: 0px 0px 15px -5px #266df0;
+      -moz-box-shadow: 0px 0px 15px -5px #266df0;
+      box-shadow: 0px 0px 15px -5px #266df0; }
     header .cta .cta-button:hover, header .cta .cta-button div:hover {
-      background: #115be4; }
+      background: #115be4;
+      -webkit-box-shadow: 0px 0px 15px -5px #115be4;
+      -moz-box-shadow: 0px 0px 15px -5px #115be4;
+      box-shadow: 0px 0px 15px -5px #115be4; }
     header .cta .cta-button span {
       color: white;
       font-size: 25px;
@@ -92,11 +99,11 @@ header {
       line-height: 60px; }
 
 main {
-  margin-top: 150px;
   display: flex;
   align-items: center;
   flex-direction: column; }
   main h1 {
+    margin-top: 150px;
     font-size: 70px;
     font-weight: bold; }
   main .whyneed .reason {
@@ -128,7 +135,18 @@ main {
         width: 300px; }
       main .whyneed .reason div img {
         display: block;
-        margin: auto; }
+        margin: auto;
+        height: 180px; }
+  main .examples .example {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.5); }
+    main .examples .example img {
+      width: 500px; }
 
 .edit-spreadsheet {
   position: fixed;
