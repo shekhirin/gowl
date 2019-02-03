@@ -204,6 +204,40 @@ main {
       box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
     }
   }
+
+  .gettingstarted {
+    ul {
+      text-align: left;
+      list-style-type: none;
+      font-weight: normal;
+      font-size: 30px;
+      margin-top: 0;
+  
+      li {
+        img {
+          width: 250px;
+          display: block;
+          margin: auto;
+        }
+        &.active {
+          a {
+            text-decoration: none;
+          }
+        }
+        &.done, &.pending {
+          color: #9B9B9B;
+          opacity: 0.1;
+        }
+  
+        &.done a {
+          text-decoration: line-through;
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 .edit-spreadsheet {

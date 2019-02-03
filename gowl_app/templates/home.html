@@ -72,7 +72,20 @@
 
         <h1 id="gettingstarted">{% trans 'Getting started' %}</h1>
         <div class="gettingstarted">
-            
+            <ul>
+                <li class="{{ states.0 }}">
+                    {% if states.0 == 'done' %}✅{% elif states.0 == 'active' %}👉{% else %}⏳{% endif %}
+                    <a {% if states.0 == 'active' %}href="/google/login/?process=login"{% endif %}>1. {% trans 'Login with Google' %}<img src="{% static 'img/btn_google_signin_light_normal_web@2x.png' %}" /></a>
+                </li>
+                <li class="{{ states.1 }}">
+                    {% if states.1 == 'done' %}✅{% elif states.1 == 'active' %}👉{% else %}⏳{% endif %}
+                    <a {% if states.1 == 'active' %}href="{% url 'user_spreadsheet' %}" target="_blank" onclick="window.setTimeout(function(){ window.location.reload() }, 5000);"{% endif %}>2. {% trans 'Open and edit Spreadsheet' %}</a>
+                </li>
+                <li class="{{ states.2 }}">
+                    {% if states.2 == 'done' %}✅{% elif states.2 == 'active' %}👉{% else %}⏳{% endif %}
+                    <a {% if states.2 == 'active' %}href="{% url 'user_profile' %}?next=/"{% endif %}>3. {% trans 'Pick a username' %}</a>
+                </li>
+            </ul>
         </div>
     </main>
 {% endblock %}
