@@ -18,7 +18,13 @@
             <img src="{% static 'img/logo.png' %}" />
             <a href="#gettingstarted" class="cta-button">
                 <div>
-                    <span>{% trans 'Create Gowl for free' %}</span>
+                    <span>
+                    {% if user.is_authenticated %}
+                    {% trans 'Open my Gowl' %}
+                    {% else %}
+                    {% trans 'Create Gowl for free' %}
+                    {% endif %}
+                    </span>
                 </div>
             </a>
         </div>
@@ -70,6 +76,7 @@
             </div>
         </div>
 
+        {% if not user.is_authenticated %}
         <h1 id="gettingstarted">{% trans 'Getting started' %}</h1>
         <div class="gettingstarted">
             <ul>
@@ -87,5 +94,6 @@
                 </li>
             </ul>
         </div>
+        {% endif %}
     </main>
 {% endblock %}

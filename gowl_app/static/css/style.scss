@@ -84,14 +84,23 @@ nav {
 }
 
 header {
-  height: 300px;
-  margin-top: 75px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+
+  @media screen and (min-width: 1200px) {
+    height: 300px;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 75px auto 0 auto;
+    justify-content: space-between;
+
+    .captions {
+      margin-right: 175px;
+    }
+  }
 
   .captions {
-    margin-right: 175px;
     p {
       font-size: 50px;
       span {
@@ -154,22 +163,27 @@ main {
         margin-top: 0;
       }
       display: flex;
-      flex-direction: row;
+      @media screen and (min-width: 1200px) {
+        flex-direction: row;
+      }
+      flex-direction: column;
       align-items: center;
+      @media screen and (min-width: 1200px) {
+        &:nth-child(odd) {
+          text-align: right;
+          div h2 span {
+            float: right;
+          }
+        }
 
-      &:nth-child(odd) {
-        text-align: right;
-        div h2 span {
-          float: right;
+        &:nth-child(even) {
+          text-align: left;
+          div h2 span {
+            float: left;
+          }
         }
       }
-
-      &:nth-child(even) {
-        text-align: left;
-        div h2 span {
-          float: left;
-        }
-      }
+      text-align: left;
 
       div {
         width: 450px;
@@ -179,6 +193,10 @@ main {
           margin-bottom: 20px;
           font-weight: normal;
           font-size: 50px;
+
+          span {
+            float: left;
+          }
         }
         span {
           font-weight: 200;
@@ -186,7 +204,10 @@ main {
           width: 300px;
         }
         img {
-          display: block;
+          @media screen and (min-width: 1200px) {
+            display: block;
+          }
+          display: none;
           margin: auto;
           height: 180px;
         }

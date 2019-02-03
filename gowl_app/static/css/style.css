@@ -56,17 +56,22 @@ nav {
       margin-right: 50px; }
 
 header {
-  height: 300px;
-  margin-top: 75px;
   display: flex;
   align-items: center;
-  justify-content: center; }
-  header .captions {
-    margin-right: 175px; }
-    header .captions p {
-      font-size: 50px; }
-      header .captions p span {
-        font-weight: bold; }
+  flex-direction: column; }
+  @media screen and (min-width: 1200px) {
+    header {
+      height: 300px;
+      flex-direction: row;
+      max-width: 1200px;
+      margin: 75px auto 0 auto;
+      justify-content: space-between; }
+      header .captions {
+        margin-right: 175px; } }
+  header .captions p {
+    font-size: 50px; }
+    header .captions p span {
+      font-weight: bold; }
   header .cta {
     display: flex;
     flex-flow: column;
@@ -109,18 +114,23 @@ main {
   main .whyneed .reason {
     margin-top: 75px;
     display: flex;
-    flex-direction: row;
-    align-items: center; }
+    flex-direction: column;
+    align-items: center;
+    text-align: left; }
     main .whyneed .reason:nth-child(1) {
       margin-top: 0; }
-    main .whyneed .reason:nth-child(odd) {
-      text-align: right; }
-      main .whyneed .reason:nth-child(odd) div h2 span {
-        float: right; }
-    main .whyneed .reason:nth-child(even) {
-      text-align: left; }
-      main .whyneed .reason:nth-child(even) div h2 span {
-        float: left; }
+    @media screen and (min-width: 1200px) {
+      main .whyneed .reason {
+        flex-direction: row; } }
+    @media screen and (min-width: 1200px) {
+      main .whyneed .reason:nth-child(odd) {
+        text-align: right; }
+        main .whyneed .reason:nth-child(odd) div h2 span {
+          float: right; }
+      main .whyneed .reason:nth-child(even) {
+        text-align: left; }
+        main .whyneed .reason:nth-child(even) div h2 span {
+          float: left; } }
     main .whyneed .reason div {
       width: 450px;
       margin: 0 30px 0 30px; }
@@ -129,14 +139,19 @@ main {
         margin-bottom: 20px;
         font-weight: normal;
         font-size: 50px; }
+        main .whyneed .reason div h2 span {
+          float: left; }
       main .whyneed .reason div span {
         font-weight: 200;
         font-size: 25px;
         width: 300px; }
       main .whyneed .reason div img {
-        display: block;
+        display: none;
         margin: auto;
         height: 180px; }
+        @media screen and (min-width: 1200px) {
+          main .whyneed .reason div img {
+            display: block; } }
   main .examples .example {
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;

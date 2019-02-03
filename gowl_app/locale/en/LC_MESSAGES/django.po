@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-03 12:40+0000\n"
+"POT-Creation-Date: 2019-02-03 12:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,65 +30,69 @@ msgstr ""
 msgid "And called it <span>Gowl</span>"
 msgstr ""
 
-#: templates/home.html:21
+#: templates/home.html:23
+msgid "Open my Gowl"
+msgstr ""
+
+#: templates/home.html:25
 msgid "Create Gowl for free"
 msgstr ""
 
-#: templates/home.html:27
+#: templates/home.html:33
 msgid "Examples"
 msgstr ""
 
-#: templates/home.html:33
+#: templates/home.html:39
 msgid "Why do you need that?"
 msgstr ""
 
-#: templates/home.html:37
+#: templates/home.html:43
 msgid "SMART goal setting"
 msgstr ""
 
-#: templates/home.html:38
+#: templates/home.html:44
 msgid "Set measureable goals and track your results"
 msgstr ""
 
-#: templates/home.html:49
-msgid "Share your goals"
-msgstr ""
-
-#: templates/home.html:50
-msgid ""
-"Tell your friends and collegues about your Gowl so you have extra motivation"
-msgstr ""
-
 #: templates/home.html:55
-msgid "No security worries"
+msgid "Share your goals"
 msgstr ""
 
 #: templates/home.html:56
 msgid ""
+"Tell your friends and collegues about your Gowl so you have extra motivation"
+msgstr ""
+
+#: templates/home.html:61
+msgid "No security worries"
+msgstr ""
+
+#: templates/home.html:62
+msgid ""
 "We use oAuth to access your spreadsheet so you can restrict access any time"
 msgstr ""
 
-#: templates/home.html:67
+#: templates/home.html:73
 msgid "Manage with ease"
 msgstr ""
 
-#: templates/home.html:68
+#: templates/home.html:74
 msgid "All your goals and measurements are in a single Google Spreadsheet"
 msgstr ""
 
-#: templates/home.html:73
+#: templates/home.html:80
 msgid "Getting started"
 msgstr ""
 
-#: templates/home.html:78
+#: templates/home.html:85
 msgid "Login with Google"
 msgstr ""
 
-#: templates/home.html:82
+#: templates/home.html:89
 msgid "Open and edit Spreadsheet"
 msgstr ""
 
-#: templates/home.html:86
+#: templates/home.html:93
 msgid "Pick a username"
 msgstr ""
 
