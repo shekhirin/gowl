@@ -131,9 +131,6 @@ TEMPLATES = [
     },
 ]
 
-if not DEBUG:
-    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
-
 WSGI_APPLICATION = 'gowl.wsgi.application'
 
 # Database
