@@ -7,7 +7,7 @@
 {% block content %}
 {% include 'nav.html' with class="nav-black" %}
 <div class="profile">
-  <form method="post" action="{{ request.get_full_path }}">
+  <form method="post" action="{{ request.get_full_path }}" autocomplete="off">
     {% csrf_token %}
     {{ form }}
     <input type="submit" value="{% trans 'Claim!' %}">

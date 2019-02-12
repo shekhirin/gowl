@@ -1,7 +1,7 @@
 <nav class="{{ class }}">
     <a class="logo" href="{% url 'home' %}">Gowl</a>
-    {% comment %} <div class="items">
+    <div class="items">
         <a class="item" href="{% url 'home' %}">home</a>
-        <a class="item" href="#">explore</a>
-    </div> {% endcomment %}
+        <a class="item" href="{% url 'home' %}#examples">explore</a>
+    </div>
 </nav>

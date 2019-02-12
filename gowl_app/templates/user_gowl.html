@@ -5,6 +5,7 @@
 {% block title %}{% title gowl_user.full_name %}{% endblock %}
 
 {% block content %}
+{% include 'nav.html' with class="nav-black" %}
 {% if request.user == gowl_user %}
 <a href="{% url 'user_spreadsheet' %}" class="edit-spreadsheet" target="_blank">
 {% trans 'Edit spreadsheet' %}
