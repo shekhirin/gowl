@@ -14,7 +14,9 @@ import os
 from datetime import timedelta
 
 from django.utils.translation import gettext_lazy as _
+from django.utils.crypto import get_random_string
 import raven
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -219,3 +221,5 @@ SOCIALACCOUNT_ADAPTER = 'gowl_app.account_adapter.NoNewUsersSocialAccountAdapter
 INTERNAL_IPS = ['127.0.0.1']
 
 SPREADSHEET_UPDATE_RATE = timedelta(minutes=5)
+
+RAND_VERSION = get_random_string(length=10)
