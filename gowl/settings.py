@@ -54,6 +54,9 @@ INSTALLED_APPS = [
     'raven.contrib.django.raven_compat'
 ]
 
+if DEBUG:
+    INSTALLED_APPS.append('sslserver')
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -207,7 +210,7 @@ SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'SCOPE': [
             'profile',
-            'https://www.googleapis.com/auth/drive',
+            'https://www.googleapis.com/auth/drive.file',
             'https://www.googleapis.com/auth/spreadsheets'
         ],
         'AUTH_PARAMS': {
